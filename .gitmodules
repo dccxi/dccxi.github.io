@@ -1,0 +1,3 @@
+[submodule "trust"]
+	path = trust
+	url = https://github.com/dccxi/trust-zh-CN
