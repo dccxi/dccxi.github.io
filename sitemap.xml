@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://dccxi.com/posts/</loc>
+    <lastmod>2020-05-16T18:38:07-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dccxi.com/</loc>
+    <lastmod>2020-05-16T18:38:07-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dccxi.com/posts/21-days/</loc>
+    <lastmod>2020-05-16T18:38:07-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dccxi.com/posts/summary-replicated-data-consistency/</loc>
+    <lastmod>2019-11-20T19:01:36-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dccxi.com/me/</loc>
+    <lastmod>2019-10-23T02:19:09-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dccxi.com/posts/album-artwork-missing-catalina/</loc>
+    <lastmod>2019-09-15T01:14:03-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dccxi.com/posts/on-contrarious-opinions/</loc>
+    <lastmod>2019-08-11T17:48:33-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dccxi.com/posts/crontab-not-working-catalina/</loc>
+    <lastmod>2019-08-06T15:23:07-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dccxi.com/projects/</loc>
+    <lastmod>2019-03-02T22:03:39-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dccxi.com/posts/shortcuts-for-texts/</loc>
+    <lastmod>2019-03-02T21:39:25-08:00</lastmod>
+  </url>
+  
+</urlset>

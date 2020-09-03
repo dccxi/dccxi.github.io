@@ -1,0 +1,423 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Posts on Tong Wu</title>
+		<link>https://dccxi.com/posts/</link>
+		<description>Recent content in Posts on Tong Wu</description>
+		<generator>Hugo -- gohugo.io</generator>
+		<language>en-us</language>
+		<copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+		<lastBuildDate>Sat, 16 May 2020 18:38:07 -0700</lastBuildDate>
+		<atom:link href="https://dccxi.com/posts/index.xml" rel="self" type="application/rss+xml" />
+		
+		<item>
+			<title>十年学会编程 Teach Yourself Programming in Ten Years (Translation in Chinese)</title>
+			<link>https://dccxi.com/posts/21-days/</link>
+			<pubDate>Sat, 16 May 2020 18:38:07 -0700</pubDate>
+			
+			<guid>https://dccxi.com/posts/21-days/</guid>
+			<description>本篇为 Peter Norvig 的《Teach Yourself Programming in Ten Years》 之简体中文译稿，暂未取得原作者授权 This text is my translation of Peter Norvig&amp;rsquo; s Teach Yourself Programming in Ten Years in Simplified Chinese. The translation wasn&amp;rsquo;t authorized by the original author yet. 为什么人</description>
+			<content type="html"><![CDATA[<p>本篇为 <a href="http://www.norvig.com/" target="_blank">Peter Norvig</a>
+ 的<a href="https://web.archive.org/web/20200510184221/http://www.norvig.com/21-days.html" target="_blank">《Teach Yourself Programming in Ten Years》</a>
+之简体中文译稿，暂未取得原作者授权</p>
+<p>This text is my translation of <a href="http://www.norvig.com/" target="_blank">Peter Norvig&rsquo;</a>
+s <em><a href="https://web.archive.org/web/20200510184221/http://www.norvig.com/21-days.html" target="_blank">Teach Yourself Programming in Ten Years</a>
+</em> in Simplified Chinese. The translation wasn&rsquo;t authorized by the original author yet.</p>
+<hr>
+<h2 id="为什么人人都这么匆忙">为什么人人都这么匆忙？</h2>
+<p>当你走进任何一家书店，你总会看到一本《24小时学会Java》，以及无数本将不同时间（从几小时到几天）与技能（C、SQL、Ruby、算法等等）排列组合所得到类似标题的书籍。使用亚马逊的高级搜索来寻找 <a href="http://www.amazon.com/gp/search/ref=sr_adv_b/?search-alias=stripbooks&amp;unfiltered=1&amp;field-keywords=&amp;field-author=&amp;field-title=teach&#43;yourself&#43;hours&amp;field-isbn=&amp;field-publisher=&amp;node=&amp;field-p_n_condition-type=&amp;field-feature_browse-bin=&amp;field-subject=&amp;field-language=&amp;field-dateop=After&amp;field-datemod=&amp;field-dateyear=2000&amp;sort=relevanceexprank&amp;Adv-Srch-Books-Submit.x=16&amp;Adv-Srch-Books-Submit.y=5" target="_blank">2000 年后出版的标题含有「小时」、「学会」等字样</a>
+的书籍，你能找到 512 本这样的书。这其中最火的十本里有九本都与编程有关，剩下一本是关于记账的。把「小时」换成「天」，或者把「学会」换成「掌握」来重新搜索，也能得到类似的结果。</p>
+<p>由此可以得出一个结论，要么大家都非常匆忙地学习编程，要么编程本身比其他技能要容易掌握得多。Felleisen 等人在他们所著的<a href="https://web.archive.org/web/20090307132819/http://www.ccs.neu.edu/home/matthias/HtDP2e/index.html" target="_blank">《如何设计程序》</a>
+<sup><a href="#sup1">[译注1]</a>
+</sup>中提到「差劲的编程是容易的，就算是木头脑袋的白痴也能在 21 天内学会它」，表达了对这一趋势的认同。漫画 The Abstruse Goose<sup><a href="#sup2">[译注2]</a>
+</sup> 也表达了<a href="http://abstrusegoose.com/249" target="_blank">同感</a>
+。</p>
+<p>我们分析一下<a href="https://www.amazon.com/dp/0672333317" target="_blank">《24小时学会C++》</a>
+<sup><a href="#sup3">[译注3]</a>
+</sup>这种标题是代表什么意思：</p>
+<ul>
+<li><code>24小时</code>：很遗憾，这点时间不够，见下节</li>
+<li><code>学会</code>：编写数个有意义的程序，并从其中的成败里学到东西；抑或是与一位有经验的程序员共事，了解了熟悉 C++ 的语言环境是一种什么体验。别想了，这些事情不可能在 24 小时内完成。总之，这么短的时间内你学不了什么东西。所以这本书只能涉及到浮于表面的熟练，而非深层次的理解。如 Alexander Pope 所说：「一知半解是件危险事」。</li>
+<li><code>C++</code>：24 小时内你或许可以学到一些 C++ 的语法（前提是你已经会了另一门编程语言），但是你恐怕无法学懂使用这门语言的方法。简而言之，假设你是一名 Basic 程序员，你可以学会用 Basic 的风格写出 C++ 的语法，但是你学不到 C++ 真正擅长（或者不擅长）的地方。那么，这有什么意义呢？<a href="http://www-pu.informatik.uni-tuebingen.de/users/klaeren/epigrams.html" target="_blank">Alan Perlis</a>
+曾经说过：「不会对你的编程思维产生影响的编程语言不值得学习」。当然，也不排除有这种可能性：为了完成某一项工作，你被迫要学一点点 C++（也许更可能是 JavaScript 或者 Processing）来与现有的工具进行交互。然而这种情况下你就不是在学习编程，而是在学习完成这项工作而已。</li>
+</ul>
+<h2 id="十年学会编程">十年学会编程</h2>
+<p>研究人员们（<a href="https://www.amazon.com/exec/obidos/ASIN/034531509X/" target="_blank">Bloom(1985)</a>
+, <a href="#bh">Bryan &amp; Harter (1899)</a>
+, <a href="https://www.amazon.com/exec/obidos/ASIN/0805803092" target="_blank">Hayes (1989)</a>
+, <a href="#cs">Chase &amp; Simon (1973)</a>
+<sup><a href="#sup4">[译注4]</a>
+</sup>）已经证实，一个人差不多需要十年的时间才能在一个领域内达到专精的水平，成为行家。这些领域包括但不限于国际象棋、编曲、发电报、绘画、钢琴演奏、游泳、网球、神经心理学研究以及拓扑学。秘诀就是——刻意练习——不仅仅是重复，而是用稍微超出自己现有能力的任务来挑战自己，并在尝试的过程中以及事后分析自己的表现，以及纠正犯过的错，然后再不断重复这个过程。这条路似乎并没有真正的捷径可走：就连在四岁时被认为是音乐神童的莫扎特，也是在十三年之后才谱出世界级的乐谱。换个类型来说，披头士在 1964 年通过一系列热门歌曲以及上了《埃德·沙利文秀》而在荧幕上突然走红，然而他们从 1957 年开始就已经在利物浦和汉堡的小俱乐部里表演了。尽管他们早些时候就已经赢得了大众的喜爱，但是那张让他们首次获得真正意义上的成功的专辑《佩珀军士》也是到了 1967 年才发行。</p>
+<p><a href="https://www.amazon.com/Outliers-Story-Success-Malcolm-Gladwell/dp/0316017922" target="_blank">Malcolm Gladwell</a>
+ 将这个观念做了通俗化处理，只是他更聚焦于「一万小时」，而非「十年」。Henri Cartier-Bresson（1908-2004）也有着另一套衡量标准：「你最差的照片是你照的头一万张」（他没意料到有数码相机这个东西，有些人一周就能照一万张）。真正的行家也许需要一辈子：Samuel Johnson（1709-1784）说过「在任何一个部门做到卓越都需要一生的努力，不能付出比一辈子更小的代价来交换卓越」。乔叟（1340-1400）也抱怨过：「人生太短，学路太长」。希波克拉底（约公元前400年）的一句名言「艺长，寿短」，出自「艺术长，寿命短，机会稍纵即逝，试验充满诡谲，事事皆难断」。当然，最终答案肯定不是一个确切的数字：假设所有的技能（比如编程、国际象棋、跳棋、演奏），或者所有人都需要完全相同的时间，来（被）掌握，这并不符合常理。如 <a href="http://www.amazon.com/K.-Anders-Ericsson/e/B000APB8AQ/" target="_blank">K. Anders Ericsson</a>
+<sup><a href="#sup3">[译注3]</a>
+</sup>教授所说：「在绝大多数领域，就算是最具有天赋的人也需要花费巨量的时间才能达到最高的水准。一万小时这个数只是给人一个概念，它代表的是，就算与生俱来就已经最具有天赋的那个人也需要年复一年日复一日地每周练习十到二十个小时，才能达到顶级的高度。」</p>
+<h2 id="所以你想成为一名程序员">所以，你想成为一名程序员</h2>
+<p>想要在编程领域获得成功，这是我给出的秘诀：</p>
+<ul>
+<li>培养编程的<code>兴趣</code>并乐在其中，确保它能足够有趣以至于能让你奉献十年/一万小时的光阴。</li>
+<li><code>动手</code>。最好的学习方法是<a href="http://www.engines4ed.org/hyperbook/nodes/NODE-120-pg.html" target="_blank">学以致用(Learning by Doing)</a>
+。更准切地说，「一个人在某个领域内的顶级水准，并不是随着经验的增长自动得来的。就算是一个经验已经很丰富的人，如果刻意付出努力来提升自己，他/她的水准仍然可以得到提升。」<a href="https://web.archive.org/web/20050224084133/http://www2.umassd.edu/swpi/DesignInCS/expertise.html" target="_blank">（第366页）</a>
+<sup><a href="#sup1">[译注1]</a>
+</sup>，而且「最有效的学习需要一项明确的任务，并需要针对个人情况调整到合适的难度，提供详尽的反馈，以及重复和改错的机会」（第20-21页）。这本书<a href="http://www.amazon.com/exec/obidos/ASIN/0521357349" target="_blank">《Cognition in Practice》</a>
+也是这个观点的一个有趣的参考。</li>
+<li>与其他程序员<code>交谈</code>，阅读其他程序。这比任何书或者培训课程都重要。</li>
+<li>如果你愿意，用四年的时间去<code>大学</code>进修（或者花更多时间进入研究生院深造）。这将让你接触到那些需要认证的工作，以及加深对该领域了解。但是，如果你不想上学，你同样能够（付出努力）来独自或者通过工作获得类似的经验。不管怎么说，只从书本中学习是不够的。《The New Hacker&rsquo;s Dictionary》的作者 Eric Raymond 曾说过：「如果学习笔刷和颜料不能让人成为杰出的画家，那么计算机科学教育也并不能令人成为杰出的程序员」。我雇过最优秀的程序员中，其中一个人只有高中文凭；他产出过许多<a href="http://www.mozilla.org/" target="_blank">伟大的软件</a>
+，拥有他自己的<a href="http://groups.google.com/groups?q=alt.fan.jwz&amp;meta=site%3Dgroups" target="_blank">新闻小组</a>
+，并且通过股票期权赚到了一笔能买下一家属于他自己的<a href="http://en.wikipedia.org/wiki/DNA_Lounge" target="_blank">夜总会</a>
+的钱。</li>
+<li>与其他程序员一起参与<code>项目</code>；在一些项目里成为拔尖的程序员，并在其他的项目里垫底。当你拔尖时，你能磨练你领导项目的能力，并用你的远见鼓舞人心。当你垫底时，你可以学习大师们的所作所为，也可以了解他们不喜欢干什么（因为他们会强迫你替他们做这些事情）。</li>
+<li>在其他程序员<code>之后</code>参与项目；理解别人所写的程序，看看怎么才能在原程序员不在场时理解并修复它；想想你可以把程序设计成什么样才能让在你之后的其他人维护它时更轻松。</li>
+<li>学习起码半打（六门<sup><a href="#sup4">[译注4]</a>
+</sup>）<code>编程语言</code>。其中一门强调类的抽象（如 Java 或者 C++），一门强调函数的抽象（如 Lisp 或者 ML 或者 Haskell），一门支持语法抽象（如 Lisp），一门支持声明式制定规范（如 Prolog 或者 C++ 模板），一门强调并行计算（如 Clojure 或者 Go）。</li>
+<li>切记，「计算机科学」的名字中有一个「计算机」。了解你的电脑需要花多久去执行一个指令，从内存中取出一个单词（分为缓存是否命中两种情况），从磁盘读取相邻的单词，以及在磁盘上寻找新的位置。（<a href="#answers">答案在此</a>
+）</li>
+<li>参与一门语言的<code>标准化</code>工作。可以是 ANSI C++ 委员会，也可以是你决定自己的本地代码风格是两个还是四个空格锁进。不管用哪种方式，你都能了解到别人喜欢一门语言的什么特质，以及他们喜欢的程度，甚至他们为什么喜欢。</li>
+<li>具备可以尽快<code>脱离</code>语言标准化工作的悟性<sup><a href="#sup8">[译注8]</a>
+</sup></li>
+</ul>
+<p>考虑到这一切，是否仅靠学习书本就能走到更远的地方，还是得打一个问号。在我第一个孩子出生之前，我读过所有教人<code>如何做</code>的书籍，却还是觉得自己是一个毫无头绪的新手。三十个月后，我第二个孩子出生了，我有回到书本去寻找慰藉吗？没有，相反，我更依赖于我的个人经验。结果发现，这对我来说要比那些专家们写的上千页的文字更有用，更能令我安心。</p>
+<p>Fred Brooks 在他的文章<a href="https://zh.wikipedia.org/wiki/%E6%B2%A1%E6%9C%89%E9%93%B6%E5%BC%B9" target="_blank">《没有银弹》</a>
+中提出了寻找优秀软件设计者的三个步骤：</p>
+<ol>
+<li>系统性地识别出顶尖的设计者们，愈早愈好</li>
+<li>指派一名职业导师负责有潜力的人才的发展，并一丝不苟地保存好职业档案</li>
+<li>为成长中设计师们提供交流与相互促进的环境</li>
+</ol>
+<p>作为以上计划的前提，部分人应该已经具有了成为好的设计师所必须的品质；而剩下要做的只是把他们哄好。<a href="http://www-pu.informatik.uni-tuebingen.de/users/klaeren/epigrams.html" target="_blank">Alan Perlis</a>
+用更简明扼要的方式表达过同样的意思：「每个人都能学会要雕刻什么东西，而米开朗基罗则必须学会不去雕塑什么。优秀的程序员也是如此」。Perlis 的意思是说，伟大的人们拥有超出他们修为的内在品质；然而这些品质却从何而来？是与生俱来的吗，还是通过勤奋而逐渐获得？就像 Auguste Gusteau（《料理鼠王》中虚构的厨师角色）说过：「人人都可以烹饪，但只有无畏之人才能做得出色。」我更愿意把它看作是把自己一生大部分时间奉献给刻意练习这件事本身的意愿，但也许<code>无畏</code>是概括它的一种方式。又或者，如 Gusteau 的批评者 Anton Ego 所说：「不是任何人都能成为优秀的艺术家，但是一位优秀的艺术家可以来自任何地方。」</p>
+<p>那么，就去买那本 Java/Ruby/Javascript/PHP 书吧，或许你会用上他的。只是，不论是 24 小时或者 21 天，这些时间都不足以让你改变你的生活或者提升你作为程序员的整体技能。何不考虑一下在 24 个月内通过努力来稳步提升自己？这样的话，你就已经准备开始扬帆远航了……</p>
+<hr>
+<h2 id="参考资料">参考资料</h2>
+<p>    Bloom, Benjamin (ed.) <a href="http://www.amazon.com/exec/obidos/ASIN/034531509X" target="_blank"><em>Developing Talent in Young People</em></a>
+, Ballantine, 1985.</p>
+<p>    Brooks, Fred, <a href="http://citeseer.nj.nec.com/context/7718/0" target="_blank"><em>No Silver Bullets</em></a>
+, IEEE Computer, vol. 20, no. 4, 1987, p. 10-19.</p>
+<p>    <a name="bh"></a>Bryan, W.L. &amp; Harter, N. &ldquo;Studies on the telegraphic language: The acquisition of a hierarchy of habits&quot;<sup><a href="#sup6">[译注6]</a>
+</sup> <em>Psychology Review</em>, 1899, 8, 345-375</p>
+<p>    Hayes, John R., <a href="http://www.amazon.com/exec/obidos/ASIN/0805803092" target="_blank"><em>Complete Problem Solver</em></a>
+ Lawrence Erlbaum, 1989.</p>
+<p>    <a name="cs"></a>Chase, William G. &amp; Simon, Herbert A. <a href="http://books.google.com/books?id=dYPSHAAACAAJ&amp;dq=%22perception&#43;in&#43;chess%22&#43;simon&amp;ei=z4PyR5iIAZnmtQPbyLyuDQ" target="_blank">&ldquo;Perception in Chess&rdquo;</a>
+ <em>Cognitive Psychology</em>, 1973, 4, 55-81.</p>
+<p>    Lave, Jean, <a href="http://www.amazon.com/exec/obidos/ASIN/0521357349" target="_blank"><em>Cognition in Practice: Mind, Mathematics, and Culture in Everyday Life</em></a>
+, Cambridge University Press, 1988.</p>
+<hr>
+<h2 id="answers">Answers</h2>
+<p>一台典型的电脑上执行各类操作的大约时间：</p>
+<table>
+<thead>
+<tr>
+<th>执行典型的指令</th>
+<th align="right">1/1,000,000,000 秒 = 1 纳秒</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>从 L1 缓存中获取</td>
+<td align="right">0.5 纳秒</td>
+</tr>
+<tr>
+<td>分支预判错误</td>
+<td align="right">5 纳秒</td>
+</tr>
+<tr>
+<td>从 L1 缓存中获取</td>
+<td align="right">7 纳秒</td>
+</tr>
+<tr>
+<td>互斥锁/解锁</td>
+<td align="right">25 纳秒</td>
+</tr>
+<tr>
+<td>从主内存中获取</td>
+<td align="right">100 纳秒</td>
+</tr>
+<tr>
+<td>在 1Gbps 的网路上发送 2KB 数据</td>
+<td align="right">20,000 纳秒</td>
+</tr>
+<tr>
+<td>从内存中连续读取 1MB</td>
+<td align="right">250,000 纳秒</td>
+</tr>
+<tr>
+<td>在磁盘上获取新的位置（查找）</td>
+<td align="right">8,000,000 纳秒</td>
+</tr>
+<tr>
+<td>从磁盘中连续读取 1MB</td>
+<td align="right">20,000,000 纳秒</td>
+</tr>
+<tr>
+<td>将数据包从美国发至欧洲并返回</td>
+<td align="right">150 毫秒 = 150,000,000 纳秒</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="附录语言的选择">附录：语言的选择</h2>
+<p>一些人对于他们该先学什么编程语言有疑惑；这没有一个唯一的答案，不过可以考虑一下这几点：</p>
+<ul>
+<li><code>问朋友</code>。当你问我：「我应该用哪个操作系统，Windows、Unix 还是 Mac？」我的回答通常是：「你朋友用什么你就用什么。」你从你朋友身上所得到的帮助可以抵消掉任何操作系统以及编程语言之间内在的差异性。同时，不要忘了考虑你未来的那些朋友：当你继续学习，你会成为使用这门语言的程序员们交流社区中的一份子。这门语言的社区是日渐壮大还是已经式微，是否有相关书籍、网站、在线论坛能让你获得帮助，以及你是否喜欢这些论坛里的人。</li>
+<li><code>保持简单</code>。像 C++ 和 Java 这类编程语言是针对专业开发人员所设计的，他们的设计者们都是一些专注于代码的运行时效率，并且经验丰富的程序员。所以，这些语言就顺理成章地囊括了针对这些应用场景所的复杂设计。而你关心的其实是学习编程本身，并非这些复杂设计；你需要的是一门新手也很容易去掌握和记忆的编程语言。</li>
+<li><code>游玩</code>。让你选一种学习钢琴的方法，你会选哪个？一个是正常、有互动——每按下一枚琴键你都能听到一个乐音；另一个是「批量」模式——当你弹完一整篇乐章才能听到声音。很显然，互动的模式让钢琴的学习更简单，学编程也是如此。使用一门有互动模式的语言吧，并坚持下去。</li>
+</ul>
+<p>结合以上几个标准，我推荐你从 <a href="http://python.org/" target="_blank">Python</a>
+ 或者 <a href="http://www.schemers.org/" target="_blank">Scheme</a>
+ 开始，作为你的第一份编程语言。Javascript 也是另一个选择，但它并没有针对初学者设计得很完美，推荐它是因为网上关于它的教程太多了，比如<a href="https://www.khanacademy.org/computing/cs/programming" target="_blank">可汗学院的教程</a>
+。不过具体情况因人而异，也有其他不错的选择。如果你的年龄还是个位数，或许你会偏向于<a href="http://alice.org/" target="_blank">Alice</a>
+、<a href="http://www.squeak.org/" target="_blank">Squeak</a>
+、<a href="https://blockly-demo.appspot.com/static/apps/index.html" target="_blank">Blockly</a>
+（即使年纪稍大的学习者也同样可以乐在其中），重要的是选择然后开始行动。</p>
+<hr>
+<h2 id="附录书籍和其他资源">附录：书籍和其他资源</h2>
+<p>一些人对于他们该从那些书或者网页里学习有疑惑；我重复一遍「仅仅靠书本学习是不够的」，不过我可以推荐下面这些：</p>
+<ul>
+<li><code>Scheme</code>：这本 <a href="http://www.amazon.com/gp/product/0262011530" target="_blank">SICP</a>
+ 或许是最好的计算机科学导论了，它确实将教授编程作为一种理解计算机科学的方式。你可以网上看到这本书的<a href="http://www.swiss.ai.mit.edu/classes/6.001/abelson-sussman-lectures/" target="_blank">讲座视频</a>
+，以及<a href="http://mitpress.mit.edu/sicp/full-text/book/book.html" target="_blank">在线版的全文</a>
+。这本书具有挑战性，而且会把一些本可以走其他途径获得成功的人挡在门外。</li>
+<li><code>Scheme</code>：关于如果优雅且实用地设计程序，<a href="http://www.amazon.com/gp/product/0262062186" target="_blank">How to Design Programs (Felleisen <em>et al.</em>)</a>
+是其中最好的几本书之一。</li>
+<li><code>Python</code>：<a href="http://www.amazon.com/gp/product/1887902996" target="_blank">Python Programming: An Intro to CS (Zelle)</a>
+ 是一本使用 Python 的入门书，不错。</li>
+<li><code>Python</code>：在 <a href="http://python.org/" target="_blank">Python.org</a>
+ 上可以找到一些网上的<a href="http://wiki.python.org/moin/BeginnersGuide" target="_blank">教程</a>
+</li>
+<li><code>Oz</code>：<a href="http://www.amazon.com/gp/product/0262220695" target="_blank">Concepts, Techniques, and Models of Computer Programming (Van Roy &amp; Haridi)</a>
+被认为是 SICP<sup><a href="#sup7">[译注7]</a>
+</sup> 的现代继承者。它讲了一些编程的大道理，涵盖了比 SICP 更广的范围，同时还更易读。它使用的 Oz 这门编程语言，少为人知，不过却可以作为学习其他编程语言的基础。</li>
+</ul>
+<hr>
+<h2 id="注释">注释</h2>
+<p>T. Capey 指出<a href="http://www.amazon.com/exec/obidos/ASIN/0805803092" target="_blank">Complete Problem Solver</a>
+的亚马逊页面上的「购买此商品的顾客也同时购买」这一栏里出现了《21天学会孟加拉语》和《学会语法与风格》，我猜大多数人查看了那本书的人都是来自这个页面。感谢 Ross Cohen 提供的关于希波克拉底的帮助。</p>
+<hr>
+<h2 id="译注">译注：</h2>
+<ol>
+<li><a name="sup1"></a>原文部分链接已失效，已替换为 <a href="https://archive.org/">https://archive.org/</a> 的版本</li>
+<li><a name="sup2"></a>原文将<code>The Abstruse Goose</code>错拼成了<code>The Abtruse Goose</code>，已做更正</li>
+<li><a name="sup3"></a>原文部分链接带有商家推广链接，已移除</li>
+<li><a name="sup4"></a>原文将 <code>Chase &amp; Simon</code> 的顺序反转并拼错，导致原页面内的 named anchor 失效，本篇中修复</li>
+<li><a name="sup5"></a>原文的当前版本只列了五类编程语言，但<a href="https://web.archive.org/web/20120614065105/http://www.norvig.com/21-days.html" target="_blank">某些旧版本</a>
+中确实列举了六类</li>
+<li><a name="sup6"></a>原文为句号，无反引号</li>
+<li><a name="sup7"></a>原文用作者名代指书籍，因中文无此使用习惯，此处直接用书名代替</li>
+<li><a name="sup8"></a>此处似乎也可译为意思几乎相反的「请根据自己的判断尽快启动语言标准化计划。」指「不要等到项目不得不标准化时才去制定标准」。感谢 V2EX 网友 @Aoang 的指正</li>
+</ol>
+]]></content>
+		</item>
+		
+		<item>
+			<title>Summary: Replicated Data Consistency Explained Through Baseball</title>
+			<link>https://dccxi.com/posts/summary-replicated-data-consistency/</link>
+			<pubDate>Wed, 20 Nov 2019 19:01:36 -0800</pubDate>
+			
+			<guid>https://dccxi.com/posts/summary-replicated-data-consistency/</guid>
+			<description>This post served as a part of my database design course (CMPE 226) project. It&amp;rsquo;s my understanding of the paper Replicated Data Consistency Explained Through Baseball .
+ As the distributed system architecture has been widely used in cloud computing during recent years, it brings different needs for ensuring data consistency among the nodes in different conditions.
+Ideally, the distributed databases are better-off to be possessing the same content at the same time, as if they were a single node.</description>
+			<content type="html"><![CDATA[<p>This post served as a part of my database design course (CMPE 226) project. It&rsquo;s my understanding of the paper <a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2011/10/ConsistencyAndBaseballReport.pdf" target="_blank"><em>Replicated Data Consistency Explained Through Baseball</em></a>
+.</p>
+<hr>
+<p>As the distributed system architecture has been widely used in cloud computing during recent years, it brings different needs for ensuring data consistency among the nodes in different conditions.</p>
+<p>Ideally, the distributed databases are better-off to be possessing the same content at the same time, as if they were a single node. However, not all systems need such the highest consistency level which could sacrifice the performance and/or availability. This is where the numerous choices of consistency models come into play.</p>
+<p>The paper introduced six levels of consistency models ranging from <em>Eventual Consistency</em> to <em>Strong Consistency</em>. These six levels of consistency guarantees have different trade-offs in terms of consistency, performance, and availability. Besides, the abstraction of the consistency model from its implementation helps prevent the discussion from going too deep into unnecessary details.</p>
+<hr>
+<p>The <em>Strong Consistency</em>, as its name suggests, is the strongest level in terms of consistency. It ensures all the write operations are visible to every single read operation afterward. If a write operation was performed, the read operation after that was guaranteed to be carried out after all the writes were completed. Due to the fact that no read operation could be performed until the change was made, the performance and availability are the worst among all the consistency guarantees.</p>
+<p>If the constraint on consistency is not needed, <em>Eventual Consistency</em> could be used to achieve better performance and availability for reading and writing operations. It has the weakest consistency but aced in performance and availability. It does not guarantee the data object to be consistent, but it will be consistent sooner or later.</p>
+<p>Additional operations could be added to enhance the constrains on consistency. The following four guarantees are accomplished by using different methods to ensure part of the consistency while not sacrificing performance and availability too much.</p>
+<p><em>Bounded Staleness</em> ensures the read to get a strongly consistent result from a certain period of time ago. <em>Consistent Prefix</em> guarantees the reads will always get the result from previous writes in the right order. It may not be the latest, but it must be a chronologically possible value. Another strategy, <em>Monotonic Reads</em>, has similar ideas, except that it doesn’t guarantee the consecutive readings to be always possible in the past. However, it does ensure that the newly read results would always be newer than those of older reads. <em>Read My Writes</em> is the strategy to go if only one client is doing all the writings so that the writer always gets the newest results, but no guarantees for other readers.</p>
+<hr>
+<p>In order to demonstrate how each guarantee fits different requirements, a few roles in a baseball game were examed to see how their needs require their respective guarantees.</p>
+<p>The official scorekeeper is the single entity that is responsible to provide the most updated score, so the newest previous score is required. This narrows the options down to <em>Strong Consistency</em> and <em>Read My Writes</em>. Considering the scorekeeper does not need to visit multiple replications and no other it writes as well, the <em>Read My Writes</em> guarantee is the most appropriate strategy to take.</p>
+<p>The umpire determines the final result of the game, as well as when to end the game. The scores of the two teams must be most updated at the umpire’s read. Besides, the umpire never writes. Thus, <em>Strong Consistency</em> is required for the umpire to do the job.</p>
+<p>The radio reporter periodically reports the score via radio. It’s reading should be chronologically correct and should not contradict the previous ones. This requirement makes <em>Consistent Prefix</em> along with <em>Monotonic Reads</em> required and nothing else.</p>
+<p>The sportswriter doesn’t care about the result until the game is over. As long as the data is up-to-date at the time when the writer starts writing about that game. <em>Bounded Staleness</em> is perfect for this purpose.</p>
+<p>The statistician records the score for the team throughout the seasons. It reads its own written stat before writing the new value. As discussed in scorekeeper, <em>Read My Writes</em> is good for that. Besides, it also needs to read today’s score as a part of writing a new value, which requires <em>Strong Consistency</em> or <em>Bounded Staleness</em> depending on the time frame.</p>
+<p>There are also stat watchers who only chat with friends about the stats and it does not need to always get the latest results. <em>Eventual Consistency</em> should be enough for them.</p>
+<hr>
+<p>After analyzing this baseball game application of the guarantee strategies, it turns out that, even within such a simple application, all six guarantees are useful, and different people could have their own needs. Since the discussion does not touch the implementation layer, it should be straightforward to use modulized implementation for different strategies. Thus, if any client wants to switch to another guarantee strategy, it could be accomplished without any pain.</p>
+]]></content>
+		</item>
+		
+		<item>
+			<title>If Your Album Artwork Not Showing Up in the New Music App on macOS Catalina after You Imported Everything</title>
+			<link>https://dccxi.com/posts/album-artwork-missing-catalina/</link>
+			<pubDate>Sun, 15 Sep 2019 01:14:03 -0700</pubDate>
+			
+			<guid>https://dccxi.com/posts/album-artwork-missing-catalina/</guid>
+			<description>Just delete the three sqlite database files inside ~/Library/Containers/com.apple.AMPArtworkAgent/Data/Documents/ (so that Music.app will rebuilt the artwork indexes database for you) and you are good to go.
+ Maybe not, because before that, I also copied everything inside ~/Library/Containers/com.apple.AMPArtworkAgent/Data/Documents/artwork/ from the old machine to the new one. The sqlite database files are presumably responsible for maintaining the index between the artwork image files and the music files. Deleting them seems to be the only way I know to trigger the update after the manual import.</description>
+			<content type="html"><![CDATA[<p>Just delete the three sqlite database files inside <code>~/Library/Containers/com.apple.AMPArtworkAgent/Data/Documents/</code> (so that Music.app will rebuilt the artwork indexes database for you) and you are good to go.</p>
+<hr>
+<p>Maybe not, because before that, I also copied everything inside <code>~/Library/Containers/com.apple.AMPArtworkAgent/Data/Documents/artwork/</code> from the old machine to the new one. The sqlite database files are presumably responsible for maintaining the index between the artwork image files and the music files. Deleting them seems to be the only way I know to trigger the update after the manual import.</p>
+<p>By the way, I can&rsquo;t confirm if this folder is only used by Music.app or by iTunes.app (before Catalina) as well, because my both Macs are running Catalina Public Beta (that&rsquo;s a stupid move, I know). However, when I sorted the files by date added, the oldest one was created at the time when I upgraded to Catalina so it looks like to be a Music.app-only thing.</p>
+<p>Actually, I guess if you don&rsquo;t have the <code>~/Music/Music/</code> folder (which only exists after you upgraded to Catalina) beside the old <code>~/Music/iTunes/</code> folder, the album artworks should be generated automatically during the upgrade automatically, because that&rsquo;s how my old Mac works. If you already have <code>~/Music/Music/</code> folder then you must have a previously imported (from iTunes.app to Music.app) library and your artworks should be either on your current or previous computer.</p>
+<p>Don&rsquo;t forget to prepare the backups though. I didn&rsquo;t research on what&rsquo;s under the hood of the new Music.app, but due to the fact that <a href="https://web.archive.org/web/20190625155403/https://support.apple.com/en-us/HT210230" target="_blank">this library is your only one on macOS Catalina</a>
+ at this time, using <code>option</code> + <code>click</code> to switch between libraries won&rsquo;t work here. Besides, the new presumably proprietary <code>.musicdb</code> db format is replacing the good ol'<code>Library.xml</code> and <code>.itl</code> files in iTunes, so please pay attention when poking around if you care about the integraty of the metadata or the music files in the library itself.</p>
+<p>Anyway, that might or might not explain why copying the Library (<code>~/Music/Music/</code> as well as <code>~/Music/iTunes</code>) from a Mac to another results in missing album artworks.</p>
+<hr>
+<p>The way I found it out is pretty straightforward. I used <code>fswatch</code> to locate what files changed when a song was added to the new Music.app library, and if you tinker around with the relavant files you found in the previous step, it won&rsquo;t take you too much time to glance at how the new Music.app local database might work.</p>
+<p>All in all, this might only apply to my case (all relavant files/folders were copied over but artworks are still not showing in the app) but it should fit into similar situations where involves clean install of macOS Catalina (and I used manual copy instead of Time Machine to transfer the library). I couldn&rsquo;t find any practical solution on the Internet before I figured it out on my own but there are some other people have <a href="https://www.reddit.com/r/MacOS/comments/bxtomx/no_artwork_in_new_catalina_music_app/" target="_blank">the same problem</a>
+. Hope this post can help those who encountered similar issues.</p>
+]]></content>
+		</item>
+		
+		<item>
+			<title>On Contrarious Opinions</title>
+			<link>https://dccxi.com/posts/on-contrarious-opinions/</link>
+			<pubDate>Sun, 11 Aug 2019 17:48:33 -0700</pubDate>
+			
+			<guid>https://dccxi.com/posts/on-contrarious-opinions/</guid>
+			<description>This morning, I was reading the comments of the apology letter posted by Versace to kill some time before lunch. I didn&amp;rsquo;t read all of them obviously, but only the several dozens on the top at the time. It&amp;rsquo;s actually not surprising to notice that only very a few of them are focusing on the facts while the majority of them were just solely expressing their emotions.
+In case you missed out what happened in the last a few days, Versace was found mistakenly listed Hong Kong as well as Macau on a T-shirt as an independent sovereignty instead of a special administrative region of China, which is regarded as inappropriate considering nowadays international situation.</description>
+			<content type="html"><![CDATA[<p>This morning, I was reading the comments of <a href="https://www.instagram.com/p/B1BM54AiL7D/" target="_blank">the apology letter posted by Versace</a>
+ to kill some time before lunch. I didn&rsquo;t read all of them obviously, but only the several dozens on the top at the time. It&rsquo;s actually not surprising to notice that only very a few of them are focusing on the <em>facts</em> while the majority of them were just solely expressing their <em>emotions</em>.</p>
+<p>In case you missed out what happened in the last a few days, Versace was found <em>mistakenly</em> listed Hong Kong as well as Macau on a T-shirt as an independent sovereignty instead of a special administrative region of China, which is regarded as inappropriate considering nowadays international situation. In light of the series of ongoing events (riots or protesters, whatever you call it) during the last two months in Hong Kong, <em>some</em> people are planning to make Hong Kong independent from its own country for <em>some</em> reason. That&rsquo;s kind of the background.</p>
+<p>Anyway, among those comments you could easily divide them into two distinct groups. Both sides are doing nothing but <em>yelling</em> at each other with the words you can easily imagine. However, no one can persuade each other and apparently they both think their side is &ldquo;winning&rdquo;.</p>
+<hr>
+<p>Before I elaborate on my own judgment, please first allow me to tell a little story that may or may not be relevant.</p>
+<p>A few days ago I was going to get a new pair of tires for my car, and it&rsquo;s the first time ever I got to deal with such thing, so I talked to my families and friends in China about that. Surprisingly, they all coincidentally reminded me to put the new pair of tires in the front, so that when I steer I won&rsquo;t lose control of the vehicle with new tires, and that generally is how it&rsquo;s done in China. However, they all seemed a little astonished when I informed them that in U.S. people put new tires on the rear axis, and it&rsquo;s for the exactly same reason, since the slippery rear wheels will indeed cause the vehicle to lose control if you think about it.</p>
+<p>I didn&rsquo;t argue with any of them of cause, because it&rsquo;s obvious that both sides have their own rationales and no conclusion could be soundly drawn without some proper experiments/simulations/calculations, or further researches, which is beyond my ability and interest. Besides, arguing, like the comments I saw in the post mentioned at the beginning, is not going to help anything, it should have been facts instead of emotions that help people make choices. However, I do need to make a decision on who I should listen to given the information I had at the time.</p>
+<p>The decision is exclusive, since if you put new tires in the front, you won&rsquo;t be able to put them in the rear, and the decision does seem to affect the safety of the vehicle greatly, because you might literally lose control.</p>
+<hr>
+<p>In my point of view, such debate about the tires somewhat resembles to what&rsquo;s going on recently in Hong Kong. Both sides are astonished by the other&rsquo;s view, and they are exclusive. Both sides believe in what they were told before, and the believe itself is supported by rationales. Besides, arguing or debating apparently solves no problem here due to continuously emotional escalation on both sides. So, what went wrong?</p>
+<p>That&rsquo;s actually beyond my scope and I have no idea how to express my view on that. However, my basic point is that, people must reach to a point where they can safely assume everyone is not out of mind and woule like to talk to each other. After that, if something I don&rsquo;t understand occurs, I have to acknowledge myself where my own prejudice lies and how I can reach to theirs.</p>
+<p>In real life, I think most of the people do know how to stand in others shoes, but when it comes to ideology, many people seem to be going crazy. Everyone involved was trapped inside a bubble with one-sided mirror, and many (rhetorically, not statistically) of them doesn&rsquo;t even aware of the existence of this bubble. They don&rsquo;t seem to express the intention of finding a <em>common ground</em>.</p>
+<hr>
+<p>Another subtle thing I noticed today when I search for Hong Kong is that, on Weibo, I was actually able to find videos of violent behavior of <em>both</em> polices and protestors. However, on Twitter, instead, I could only find the video of police hitting people but no trace of outraged protestors illegally attacking the police. The only sources of the video clips in favor of police that I could find were those posted by Chinese official medias, and in the comments you can easily find the complains about the objectivity and neutrality issue of the source were repeatedly raised, which you would never find in other &ldquo;freedom advocating&rdquo; medias when they were posting the opposite ideological contents.</p>
+<p>My engineering background told me that if one is going to compare things according to the metrics, the same standard should be applied to all relevant objects. Otherwise the measurement would not be credible, and I think it is an universally accepted rule.</p>
+<hr>
+<p>Anyhow, do you wonder what I did with my tires in the end? I put them in the rear, because that&rsquo;s how it has been done for ages here in the U.S. where I currently live, and it won&rsquo;t hurt anyway.</p>
+]]></content>
+		</item>
+		
+		<item>
+			<title>If Any of Your Crontab Tasks No Longer Works on macOS Catalina</title>
+			<link>https://dccxi.com/posts/crontab-not-working-catalina/</link>
+			<pubDate>Tue, 06 Aug 2019 15:23:07 -0700</pubDate>
+			
+			<guid>https://dccxi.com/posts/crontab-not-working-catalina/</guid>
+			<description>It turns out to be a permission issue brought by the newly introduced security features, thus it&amp;rsquo;s not a &amp;ldquo;bUG&amp;rdquo;.
+To solve it, just add your cron location (in most cases /usr/sbin/cron) to the Full Disk Access lists located at System Preferences.app -&amp;gt; Security &amp;amp; Privacy -&amp;gt; Privacy -&amp;gt; Full Disk Access. &amp;ldquo;Click the lock to make changes&amp;rdquo; and &amp;ldquo;+&amp;rdquo; to navigate to your cron location.
+No idea how to navigate to /usr/sbin/cron in the file locator?</description>
+			<content type="html"><![CDATA[<p>It turns out to be a permission issue brought by the newly introduced security features, thus it&rsquo;s not a &ldquo;bUG&rdquo;.</p>
+<p>To solve it, just add your <code>cron</code> location (in most cases <code>/usr/sbin/cron</code>) to the <strong>Full Disk Access</strong> lists located at <code>System Preferences.app -&gt; Security &amp; Privacy -&gt; Privacy -&gt; Full Disk Access</code>.
+&ldquo;Click the lock to make changes&rdquo; and &ldquo;+&rdquo; to navigate to your <code>cron</code> location.</p>
+<p>No idea how to navigate to <code>/usr/sbin/cron</code> in the file locator? Do this:</p>
+<ol>
+<li><code>$ open /usr/</code> in terminal of your choice</li>
+<li>drag <code>sbin</code> folder to the side bar (a.k.a. <code>Favorites</code>)</li>
+<li>back to the file locator in <strong>System Preferences.app</strong></li>
+<li>now you should know what to do next</li>
+<li>don&rsquo;t forget to remove the <code>sbin</code> folder from <code>Favorites</code> afterwards if you want keep it tidy</li>
+</ol>
+<p>Alternatively, you could actually use <code>command + shift + G</code> and typed in <code>/usr/sbin/</code> in the file locator (I just find it out today).</p>
+<p>That&rsquo;s it.</p>
+]]></content>
+		</item>
+		
+		<item>
+			<title>Productive Texts Processing OR Unifying Shortcuts between Platforms</title>
+			<link>https://dccxi.com/posts/shortcuts-for-texts/</link>
+			<pubDate>Sat, 02 Mar 2019 21:39:25 -0800</pubDate>
+			
+			<guid>https://dccxi.com/posts/shortcuts-for-texts/</guid>
+			<description>Handy shortcuts can boost up your productivity by a whole level. I have quite a few of those who empowered me to process texts more efficiently. Most of them are Emacs shortcuts that’s natively supported on Mac. Here is a list of the keybindings I use.
+   Action Keybinding (may be custom) Alternative Keys (same or similar)     Move to end of the line control + e end   Move to beginning of the line control + a home   Delete control + d del   Backspace control + h bs   Left (back) control + b left   Right (forward) control + f right   Up (previous) control + p up   Down (next) control + n down   Delete the rest of the line control + k N/A   Remove previous word control + w opt + bs   Remove next word control + q opt + del    Except for the last one, the keybindings mentioned above were natively supported on macOS.</description>
+			<content type="html"><![CDATA[<p>Handy shortcuts can boost up your productivity by a whole level. I have quite a few of those who empowered me to process texts more efficiently. Most of them are Emacs shortcuts that’s natively supported on Mac. Here is a list of the keybindings I use.</p>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Keybinding (may be custom)</th>
+<th>Alternative Keys (same or similar)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Move to end of the line</td>
+<td>control + e</td>
+<td>end</td>
+</tr>
+<tr>
+<td>Move to beginning of the line</td>
+<td>control + a</td>
+<td>home</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td>control + d</td>
+<td>del</td>
+</tr>
+<tr>
+<td>Backspace</td>
+<td>control + h</td>
+<td>bs</td>
+</tr>
+<tr>
+<td>Left (back)</td>
+<td>control + b</td>
+<td>left</td>
+</tr>
+<tr>
+<td>Right (forward)</td>
+<td>control + f</td>
+<td>right</td>
+</tr>
+<tr>
+<td>Up (previous)</td>
+<td>control + p</td>
+<td>up</td>
+</tr>
+<tr>
+<td>Down (next)</td>
+<td>control + n</td>
+<td>down</td>
+</tr>
+<tr>
+<td>Delete the rest of the line</td>
+<td>control + k</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Remove previous word</td>
+<td>control + w</td>
+<td>opt + bs</td>
+</tr>
+<tr>
+<td>Remove next word</td>
+<td>control + q</td>
+<td>opt + del</td>
+</tr>
+</tbody>
+</table>
+<p>Except for the last one, the keybindings mentioned above were natively supported on macOS. The complete list of document shortcuts on Mac could be found <a href="https://support.apple.com/en-us/HT201236#text" target="_blank">here</a>
+.</p>
+<p>Before we start, I strongly suggest you to map the <code>caps lock</code> key to some other key you would actually use, like <code>control</code>. It’s way more productive to keep a frequently used function key instead of a key that no one ever used under your pinky finger.</p>
+<h2 id="macos">macOS</h2>
+<p>Custom keybindings could be easily achieved by tools like <em>HammerSpoon</em>.</p>
+<p>I used my pinky finger a lot. In addition to the those shortcuts mentioned above, I also mapped <code>escape</code> to <code>control</code> when it’s pressed for less than 0.15 seconds using a Spoon called <a href="https://github.com/jasonrudolph/ControlEscape.spoon" target="_blank">ControlEscape</a>
+.</p>
+<p>It’s actually very practical to map any <code>modifier keys</code> with an additional feature to a short press (or tap). Thus, I modified the Spoon mentioned above a little bit to <a href="https://github.com/dccxi/ShiftParentheses.spoon" target="_blank">ShiftParentheses</a>
+. It made my <code>shift</code> more useful as well.</p>
+<p>BTT is also a convenient tool for me to move or resize window by only moving your mouse while a certain combination of keys was pressed. It&rsquo;s also used to accelerate my track pad speed. I keep a Magic TrackPad under my space bar, so that I can use my thumb to move the cursor in a long distance without move my hands away from my keyboard.</p>
+<h2 id="windows">Windows</h2>
+<p>AutoHotKey is the way to go on Windows. There are also similar scripts that you can use to achieve functions like ControlEscape mentioned above. Thus, I can use almost the same keybindings on both Mac and Windows.</p>
+<p>Modifiers on Windows have similar one-to-one relationship with macOS modifier but not exactly. Same function involving <code>cmd</code> on macOS can relate to <code>ctrl</code> but some might goes to <code>alt</code> key. For example, on Mac, you hold <code>cmd</code> when click on a link to open it in a new tab, while on Windows, you need to hold <code>alt</code> instead. However, many other keys relies on <code>ctrl</code>.</p>
+<p>In order to reduce the impact on Windows’s original keybindings, I mapped the left <code>alt</code>, which has the same location as <code>cmd</code> on Mac, to a hype key (could be a combination of <code>ctrl</code> + <code>alt</code> + <code>shift</code> or any modifiers you like), where native keybindings could be mapped.</p>
+<p>My <code>caps lock</code> was mapped in the same manner. In addition, it was also programmed to have similar behavior as the <code>ControlEscape</code> script on Mac mentioned above.</p>
+<h2 id="chrome-os">Chrome OS</h2>
+<p><code>caps lock</code> doesn&rsquo;t exist on ChromeBooks, but it has a <code>search</code> key. Google does provide options to swap <code>modifier keys</code> as well the <code>search</code> key with each other. Since <code>alt</code> is not widely used here, I swapped it with <code>ctrl</code>. It allows me to create new tab, restore closed pages, locate to address bar, and close the tab using exactly the same keybindings as on other platforms.</p>
+<p>However, what about Emacs keybindings?</p>
+<p><a href="https://chrome.google.com/webstore/detail/emacs-shortcuts-ime/mkegpdcnenfnhenaliggngipehndddne?hl=en-US" target="_blank">Emacs shortcuts IME</a>
+ is a brilliant idea to make this happen on Chrome OS platform. It uses IME to deal with all the keybindings. It wasn’t flexible as the previous mentioned tools, but I think you can always compile the .crx files yourself after modifying the parameters. It’s worth trying if you rely on ChromeBooks for text processing.</p>
+<p>ChromeBook is an awesome invention. It is light-weight, light-weight, and light-weight. You can easily get a used ChromeBook Plus from Samsung which has amazing screen and unbelievable battery life for just $200. I use it when I can finish all my work on Google Chrome. There are so many awesome online IDEAs like <a href="http://repl.it" target="_blank">repl.it</a>
+, which made ChromeBooks productive as well (at least more than iPad Pro). Very interesting and inspiring device.</p>
+<h2 id="ios">iOS</h2>
+<p>You can get it that I&rsquo;m joking, right?</p>
+]]></content>
+		</item>
+		
+	</channel>
+</rss>
