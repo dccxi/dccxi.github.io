@@ -15,11 +15,11 @@
 			<pubDate>Sat, 16 May 2020 18:38:07 -0700</pubDate>
 			
 			<guid>https://dccxi.com/posts/21-days/</guid>
-			<description>本篇为 Peter Norvig 的《Teach Yourself Programming in Ten Years》 之简体中文译稿，暂未取得原作者授权 This text is my translation of Peter Norvig&amp;rsquo; s Teach Yourself Programming in Ten Years in Simplified Chinese. The translation wasn&amp;rsquo;t authorized by the original author yet. 为什么人</description>
+			<description>本篇为 Peter Norvig 的《Teach Yourself Programming in Ten Years》 之简体中文译稿，暂未取得原作者授权 This text is my translation of Peter Norvig&#39; s Teach Yourself Programming in Ten Years in Simplified Chinese. The translation wasn&amp;rsquo;t authorized by the original author yet. 为什么人</description>
 			<content type="html"><![CDATA[<p>本篇为 <a href="http://www.norvig.com/" target="_blank">Peter Norvig</a>
  的<a href="https://web.archive.org/web/20200510184221/http://www.norvig.com/21-days.html" target="_blank">《Teach Yourself Programming in Ten Years》</a>
 之简体中文译稿，暂未取得原作者授权</p>
-<p>This text is my translation of <a href="http://www.norvig.com/" target="_blank">Peter Norvig&rsquo;</a>
+<p>This text is my translation of <a href="http://www.norvig.com/" target="_blank">Peter Norvig'</a>
 s <em><a href="https://web.archive.org/web/20200510184221/http://www.norvig.com/21-days.html" target="_blank">Teach Yourself Programming in Ten Years</a>
 </em> in Simplified Chinese. The translation wasn&rsquo;t authorized by the original author yet.</p>
 <hr>
@@ -99,49 +99,49 @@ s <em><a href="https://web.archive.org/web/20200510184221/http://www.norvig.com/
 <thead>
 <tr>
 <th>执行典型的指令</th>
-<th align="right">1/1,000,000,000 秒 = 1 纳秒</th>
+<th style="text-align:right">1/1,000,000,000 秒 = 1 纳秒</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>从 L1 缓存中获取</td>
-<td align="right">0.5 纳秒</td>
+<td style="text-align:right">0.5 纳秒</td>
 </tr>
 <tr>
 <td>分支预判错误</td>
-<td align="right">5 纳秒</td>
+<td style="text-align:right">5 纳秒</td>
 </tr>
 <tr>
 <td>从 L1 缓存中获取</td>
-<td align="right">7 纳秒</td>
+<td style="text-align:right">7 纳秒</td>
 </tr>
 <tr>
 <td>互斥锁/解锁</td>
-<td align="right">25 纳秒</td>
+<td style="text-align:right">25 纳秒</td>
 </tr>
 <tr>
 <td>从主内存中获取</td>
-<td align="right">100 纳秒</td>
+<td style="text-align:right">100 纳秒</td>
 </tr>
 <tr>
 <td>在 1Gbps 的网路上发送 2KB 数据</td>
-<td align="right">20,000 纳秒</td>
+<td style="text-align:right">20,000 纳秒</td>
 </tr>
 <tr>
 <td>从内存中连续读取 1MB</td>
-<td align="right">250,000 纳秒</td>
+<td style="text-align:right">250,000 纳秒</td>
 </tr>
 <tr>
 <td>在磁盘上获取新的位置（查找）</td>
-<td align="right">8,000,000 纳秒</td>
+<td style="text-align:right">8,000,000 纳秒</td>
 </tr>
 <tr>
 <td>从磁盘中连续读取 1MB</td>
-<td align="right">20,000,000 纳秒</td>
+<td style="text-align:right">20,000,000 纳秒</td>
 </tr>
 <tr>
 <td>将数据包从美国发至欧洲并返回</td>
-<td align="right">150 毫秒 = 150,000,000 纳秒</td>
+<td style="text-align:right">150 毫秒 = 150,000,000 纳秒</td>
 </tr>
 </tbody>
 </table>
@@ -186,29 +186,30 @@ s <em><a href="https://web.archive.org/web/20200510184221/http://www.norvig.com/
 <hr>
 <ol>
 <li id="fn:1" role="doc-endnote">
-<p>原文部分链接已失效，已替换为 <a href="https://archive.org/">https://archive.org/</a> 的版本 <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>原文部分链接已失效，已替换为 <a href="https://archive.org/" target="_blank">https://archive.org/</a>
+ 的版本&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:2" role="doc-endnote">
-<p>原文将<code>The Abstruse Goose</code>错拼成了<code>The Abtruse Goose</code>，已做更正 <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>原文将<code>The Abstruse Goose</code>错拼成了<code>The Abtruse Goose</code>，已做更正&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:3" role="doc-endnote">
-<p>原文部分链接带有商家推广链接，已移除 <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>原文部分链接带有商家推广链接，已移除&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:4" role="doc-endnote">
-<p>原文将 <code>Chase &amp; Simon</code> 的顺序反转并拼错，导致原页面内的 named anchor 失效，本篇中修复 <a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>原文将 <code>Chase &amp; Simon</code> 的顺序反转并拼错，导致原页面内的 named anchor 失效，本篇中修复&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:5" role="doc-endnote">
 <p>原文的当前版本只列了五类编程语言，但<a href="https://web.archive.org/web/20120614065105/http://www.norvig.com/21-days.html" target="_blank">某些旧版本</a>
-中确实列举了六类 <a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+中确实列举了六类&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:6" role="doc-endnote">
-<p>此处似乎也可译为意思几乎相反的「请根据自己的判断尽快启动语言标准化计划。」指「不要等到项目不得不标准化时才去制定标准」。感谢 V2EX 网友 @Aoang 的指正 <a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>此处似乎也可译为意思几乎相反的「请根据自己的判断尽快启动语言标准化计划。」指「不要等到项目不得不标准化时才去制定标准」。感谢 V2EX 网友 @Aoang 的指正&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:7" role="doc-endnote">
-<p>原文为句号，无反引号 <a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>原文为句号，无反引号&#160;<a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:8" role="doc-endnote">
-<p>原文用作者名代指书籍，因中文无此使用习惯，此处直接用书名代替 <a href="#fnref:8" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>原文用作者名代指书籍，因中文无此使用习惯，此处直接用书名代替&#160;<a href="#fnref:8" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </section>
