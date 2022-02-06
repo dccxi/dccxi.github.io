@@ -85,7 +85,7 @@ No idea how to navigate to /usr/sbin/cron in the file locator?</description>
       <pubDate>Sat, 02 Mar 2019 21:39:25 -0800</pubDate>
       
       <guid>https://dccxi.com/posts/shortcuts-for-texts/</guid>
-      <description>Handy shortcuts can boost up your productivity by a whole level. I have quite a few of those who empowered me to process texts more efficiently. Most of them are Emacs shortcuts that’s natively supported on Mac. Here is a list of the keybindings I use.
+      <description>Handy shortcuts can boost up your productivity by a whole level. I have quite a few of those who empowered me to process texts more efficiently. Most of them are Emacs shortcuts that&amp;rsquo;s natively supported on Mac. Here is a list of the keybindings I use.
    Action Keybinding (may be custom) Alternative Keys (same or similar)     Move to end of the line control + e end   Move to beginning of the line control + a home   Delete control + d del   Backspace control + h bs   Left (back) control + b left   Right (forward) control + f right   Up (previous) control + p up   Down (next) control + n down   Delete the rest of the line control + k N/A   Remove previous word control + w opt + bs   Remove next word control + q opt + del    Except for the last one, the keybindings mentioned above were natively supported on macOS.</description>
     </item>
     
