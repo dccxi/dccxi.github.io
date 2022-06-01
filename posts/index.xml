@@ -1,22 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Posts on Tong Wu</title>
-		<link>https://dccxi.com/posts/</link>
-		<description>Recent content in Posts on Tong Wu</description>
-		<generator>Hugo -- gohugo.io</generator>
-		<language>en-us</language>
-		<copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-		<lastBuildDate>Sat, 16 May 2020 18:38:07 -0700</lastBuildDate>
-		<atom:link href="https://dccxi.com/posts/index.xml" rel="self" type="application/rss+xml" />
-		
-		<item>
-			<title>十年学会编程 Teach Yourself Programming in Ten Years (Translation in Chinese)</title>
-			<link>https://dccxi.com/posts/21-days/</link>
-			<pubDate>Sat, 16 May 2020 18:38:07 -0700</pubDate>
-			
-			<guid>https://dccxi.com/posts/21-days/</guid>
-			<description>本篇为 Peter Norvig 的《Teach Yourself Programming in Ten Years》 之简体中文译稿，暂未取得原作者授权 This text is my translation of Peter Norvig&#39; s Teach Yourself Programming in Ten Years in Simplified Chinese. The translation wasn&amp;rsquo;t authorized by the original author yet. 为什么人</description>
-			<content type="html"><![CDATA[<p>本篇为 <a href="http://www.norvig.com/" target="_blank">Peter Norvig</a>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Tong Wu</title><link>https://dccxi.com/posts/</link><description>Recent content in Posts on Tong Wu</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 16 May 2020 18:38:07 -0700</lastBuildDate><atom:link href="https://dccxi.com/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>十年学会编程 Teach Yourself Programming in Ten Years (Translation in Chinese)</title><link>https://dccxi.com/posts/21-days/</link><pubDate>Sat, 16 May 2020 18:38:07 -0700</pubDate><guid>https://dccxi.com/posts/21-days/</guid><description>本篇为 Peter Norvig 的《Teach Yourself Programming in Ten Years》 之简体中文译稿，暂未取得原作者授权 This text is my translation of Peter Norvig' s Teach Yourself Programming in Ten Years in Simplified Chinese. The translation wasn&amp;rsquo;t authorized by the original author yet. 为什么人</description><content type="html"><![CDATA[<p>本篇为 <a href="http://www.norvig.com/" target="_blank">Peter Norvig</a>
  的<a href="https://web.archive.org/web/20200510184221/http://www.norvig.com/21-days.html" target="_blank">《Teach Yourself Programming in Ten Years》</a>
 之简体中文译稿，暂未取得原作者授权</p>
 <p>This text is my translation of <a href="http://www.norvig.com/" target="_blank">Peter Norvig'</a>
@@ -213,19 +195,9 @@ s <em><a href="https://web.archive.org/web/20200510184221/http://www.norvig.com/
 </li>
 </ol>
 </section>
-]]></content>
-		</item>
-		
-		<item>
-			<title>Summary: Replicated Data Consistency Explained Through Baseball</title>
-			<link>https://dccxi.com/posts/summary-replicated-data-consistency/</link>
-			<pubDate>Wed, 20 Nov 2019 19:01:36 -0800</pubDate>
-			
-			<guid>https://dccxi.com/posts/summary-replicated-data-consistency/</guid>
-			<description>This post served as a part of my database design course (CMPE 226) project. It&amp;rsquo;s my understanding of the paper Replicated Data Consistency Explained Through Baseball .
- As the distributed system architecture has been widely used in cloud computing during recent years, it brings different needs for ensuring data consistency among the nodes in different conditions.
-Ideally, the distributed databases are better-off to be possessing the same content at the same time, as if they were a single node.</description>
-			<content type="html"><![CDATA[<p>This post served as a part of my database design course (CMPE 226) project. It&rsquo;s my understanding of the paper <a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2011/10/ConsistencyAndBaseballReport.pdf" target="_blank"><em>Replicated Data Consistency Explained Through Baseball</em></a>
+]]></content></item><item><title>Summary: Replicated Data Consistency Explained Through Baseball</title><link>https://dccxi.com/posts/summary-replicated-data-consistency/</link><pubDate>Wed, 20 Nov 2019 19:01:36 -0800</pubDate><guid>https://dccxi.com/posts/summary-replicated-data-consistency/</guid><description>This post served as a part of my database design course (CMPE 226) project. It&amp;rsquo;s my understanding of the paper Replicated Data Consistency Explained Through Baseball .
+As the distributed system architecture has been widely used in cloud computing during recent years, it brings different needs for ensuring data consistency among the nodes in different conditions.
+Ideally, the distributed databases are better-off to be possessing the same content at the same time, as if they were a single node.</description><content type="html"><![CDATA[<p>This post served as a part of my database design course (CMPE 226) project. It&rsquo;s my understanding of the paper <a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2011/10/ConsistencyAndBaseballReport.pdf" target="_blank"><em>Replicated Data Consistency Explained Through Baseball</em></a>
 .</p>
 <hr>
 <p>As the distributed system architecture has been widely used in cloud computing during recent years, it brings different needs for ensuring data consistency among the nodes in different conditions.</p>
@@ -246,18 +218,8 @@ Ideally, the distributed databases are better-off to be possessing the same cont
 <p>There are also stat watchers who only chat with friends about the stats and it does not need to always get the latest results. <em>Eventual Consistency</em> should be enough for them.</p>
 <hr>
 <p>After analyzing this baseball game application of the guarantee strategies, it turns out that, even within such a simple application, all six guarantees are useful, and different people could have their own needs. Since the discussion does not touch the implementation layer, it should be straightforward to use modulized implementation for different strategies. Thus, if any client wants to switch to another guarantee strategy, it could be accomplished without any pain.</p>
-]]></content>
-		</item>
-		
-		<item>
-			<title>If Your Album Artwork Not Showing Up in the New Music App on macOS Catalina after You Imported Everything</title>
-			<link>https://dccxi.com/posts/album-artwork-missing-catalina/</link>
-			<pubDate>Sun, 15 Sep 2019 01:14:03 -0700</pubDate>
-			
-			<guid>https://dccxi.com/posts/album-artwork-missing-catalina/</guid>
-			<description>Just delete the three sqlite database files inside ~/Library/Containers/com.apple.AMPArtworkAgent/Data/Documents/ (so that Music.app will rebuilt the artwork indexes database for you) and you are good to go.
- Maybe not, because before that, I also copied everything inside ~/Library/Containers/com.apple.AMPArtworkAgent/Data/Documents/artwork/ from the old machine to the new one. The sqlite database files are presumably responsible for maintaining the index between the artwork image files and the music files. Deleting them seems to be the only way I know to trigger the update after the manual import.</description>
-			<content type="html"><![CDATA[<p>Just delete the three sqlite database files inside <code>~/Library/Containers/com.apple.AMPArtworkAgent/Data/Documents/</code> (so that Music.app will rebuilt the artwork indexes database for you) and you are good to go.</p>
+]]></content></item><item><title>If Your Album Artwork Not Showing Up in the New Music App on macOS Catalina after You Imported Everything</title><link>https://dccxi.com/posts/album-artwork-missing-catalina/</link><pubDate>Sun, 15 Sep 2019 01:14:03 -0700</pubDate><guid>https://dccxi.com/posts/album-artwork-missing-catalina/</guid><description>Just delete the three sqlite database files inside ~/Library/Containers/com.apple.AMPArtworkAgent/Data/Documents/ (so that Music.app will rebuilt the artwork indexes database for you) and you are good to go.
+Maybe not, because before that, I also copied everything inside ~/Library/Containers/com.apple.AMPArtworkAgent/Data/Documents/artwork/ from the old machine to the new one. The sqlite database files are presumably responsible for maintaining the index between the artwork image files and the music files. Deleting them seems to be the only way I know to trigger the update after the manual import.</description><content type="html"><![CDATA[<p>Just delete the three sqlite database files inside <code>~/Library/Containers/com.apple.AMPArtworkAgent/Data/Documents/</code> (so that Music.app will rebuilt the artwork indexes database for you) and you are good to go.</p>
 <hr>
 <p>Maybe not, because before that, I also copied everything inside <code>~/Library/Containers/com.apple.AMPArtworkAgent/Data/Documents/artwork/</code> from the old machine to the new one. The sqlite database files are presumably responsible for maintaining the index between the artwork image files and the music files. Deleting them seems to be the only way I know to trigger the update after the manual import.</p>
 <p>By the way, I can&rsquo;t confirm if this folder is only used by Music.app or by iTunes.app (before Catalina) as well, because my both Macs are running Catalina Public Beta (that&rsquo;s a stupid move, I know). However, when I sorted the files by date added, the oldest one was created at the time when I upgraded to Catalina so it looks like to be a Music.app-only thing.</p>
@@ -269,18 +231,8 @@ Ideally, the distributed databases are better-off to be possessing the same cont
 <p>The way I found it out is pretty straightforward. I used <code>fswatch</code> to locate what files changed when a song was added to the new Music.app library, and if you tinker around with the relavant files you found in the previous step, it won&rsquo;t take you too much time to glance at how the new Music.app local database might work.</p>
 <p>All in all, this might only apply to my case (all relavant files/folders were copied over but artworks are still not showing in the app) but it should fit into similar situations where involves clean install of macOS Catalina (and I used manual copy instead of Time Machine to transfer the library). I couldn&rsquo;t find any practical solution on the Internet before I figured it out on my own but there are some other people have <a href="https://www.reddit.com/r/MacOS/comments/bxtomx/no_artwork_in_new_catalina_music_app/" target="_blank">the same problem</a>
 . Hope this post can help those who encountered similar issues.</p>
-]]></content>
-		</item>
-		
-		<item>
-			<title>On Contrarious Opinions</title>
-			<link>https://dccxi.com/posts/on-contrarious-opinions/</link>
-			<pubDate>Sun, 11 Aug 2019 17:48:33 -0700</pubDate>
-			
-			<guid>https://dccxi.com/posts/on-contrarious-opinions/</guid>
-			<description>This morning, I was reading the comments of the apology letter posted by Versace to kill some time before lunch. I didn&amp;rsquo;t read all of them obviously, but only the several dozens on the top at the time. It&amp;rsquo;s actually not surprising to notice that only very a few of them are focusing on the facts while the majority of them were just solely expressing their emotions.
-In case you missed out what happened in the last a few days, Versace was found mistakenly listed Hong Kong as well as Macau on a T-shirt as an independent sovereignty instead of a special administrative region of China, which is regarded as inappropriate considering nowadays international situation.</description>
-			<content type="html"><![CDATA[<p>This morning, I was reading the comments of <a href="https://www.instagram.com/p/B1BM54AiL7D/" target="_blank">the apology letter posted by Versace</a>
+]]></content></item><item><title>On Contrarious Opinions</title><link>https://dccxi.com/posts/on-contrarious-opinions/</link><pubDate>Sun, 11 Aug 2019 17:48:33 -0700</pubDate><guid>https://dccxi.com/posts/on-contrarious-opinions/</guid><description>This morning, I was reading the comments of the apology letter posted by Versace to kill some time before lunch. I didn&amp;rsquo;t read all of them obviously, but only the several dozens on the top at the time. It&amp;rsquo;s actually not surprising to notice that only very a few of them are focusing on the facts while the majority of them were just solely expressing their emotions.
+In case you missed out what happened in the last a few days, Versace was found mistakenly listed Hong Kong as well as Macau on a T-shirt as an independent sovereignty instead of a special administrative region of China, which is regarded as inappropriate considering nowadays international situation.</description><content type="html"><![CDATA[<p>This morning, I was reading the comments of <a href="https://www.instagram.com/p/B1BM54AiL7D/" target="_blank">the apology letter posted by Versace</a>
  to kill some time before lunch. I didn&rsquo;t read all of them obviously, but only the several dozens on the top at the time. It&rsquo;s actually not surprising to notice that only very a few of them are focusing on the <em>facts</em> while the majority of them were just solely expressing their <em>emotions</em>.</p>
 <p>In case you missed out what happened in the last a few days, Versace was found <em>mistakenly</em> listed Hong Kong as well as Macau on a T-shirt as an independent sovereignty instead of a special administrative region of China, which is regarded as inappropriate considering nowadays international situation. In light of the series of ongoing events (riots or protesters, whatever you call it) during the last two months in Hong Kong, <em>some</em> people are planning to make Hong Kong independent from its own country for <em>some</em> reason. That&rsquo;s kind of the background.</p>
 <p>Anyway, among those comments you could easily divide them into two distinct groups. Both sides are doing nothing but <em>yelling</em> at each other with the words you can easily imagine. However, no one can persuade each other and apparently they both think their side is &ldquo;winning&rdquo;.</p>
@@ -298,19 +250,9 @@ In case you missed out what happened in the last a few days, Versace was found m
 <p>My engineering background told me that if one is going to compare things according to the metrics, the same standard should be applied to all relevant objects. Otherwise the measurement would not be credible, and I think it is an universally accepted rule.</p>
 <hr>
 <p>Anyhow, do you wonder what I did with my tires in the end? I put them in the rear, because that&rsquo;s how it has been done for ages here in the U.S. where I currently live, and it won&rsquo;t hurt anyway.</p>
-]]></content>
-		</item>
-		
-		<item>
-			<title>If Any of Your Crontab Tasks No Longer Works on macOS Catalina</title>
-			<link>https://dccxi.com/posts/crontab-not-working-catalina/</link>
-			<pubDate>Tue, 06 Aug 2019 15:23:07 -0700</pubDate>
-			
-			<guid>https://dccxi.com/posts/crontab-not-working-catalina/</guid>
-			<description>It turns out to be a permission issue brought by the newly introduced security features, thus it&amp;rsquo;s not a &amp;ldquo;bUG&amp;rdquo;.
+]]></content></item><item><title>If Any of Your Crontab Tasks No Longer Works on macOS Catalina</title><link>https://dccxi.com/posts/crontab-not-working-catalina/</link><pubDate>Tue, 06 Aug 2019 15:23:07 -0700</pubDate><guid>https://dccxi.com/posts/crontab-not-working-catalina/</guid><description>It turns out to be a permission issue brought by the newly introduced security features, thus it&amp;rsquo;s not a &amp;ldquo;bUG&amp;rdquo;.
 To solve it, just add your cron location (in most cases /usr/sbin/cron) to the Full Disk Access lists located at System Preferences.app -&amp;gt; Security &amp;amp; Privacy -&amp;gt; Privacy -&amp;gt; Full Disk Access. &amp;ldquo;Click the lock to make changes&amp;rdquo; and &amp;ldquo;+&amp;rdquo; to navigate to your cron location.
-No idea how to navigate to /usr/sbin/cron in the file locator?</description>
-			<content type="html"><![CDATA[<p>It turns out to be a permission issue brought by the newly introduced security features, thus it&rsquo;s not a &ldquo;bUG&rdquo;.</p>
+No idea how to navigate to /usr/sbin/cron in the file locator?</description><content type="html"><![CDATA[<p>It turns out to be a permission issue brought by the newly introduced security features, thus it&rsquo;s not a &ldquo;bUG&rdquo;.</p>
 <p>To solve it, just add your <code>cron</code> location (in most cases <code>/usr/sbin/cron</code>) to the <strong>Full Disk Access</strong> lists located at <code>System Preferences.app -&gt; Security &amp; Privacy -&gt; Privacy -&gt; Full Disk Access</code>.
 &ldquo;Click the lock to make changes&rdquo; and &ldquo;+&rdquo; to navigate to your <code>cron</code> location.</p>
 <p>No idea how to navigate to <code>/usr/sbin/cron</code> in the file locator? Do this:</p>
@@ -323,18 +265,8 @@ No idea how to navigate to /usr/sbin/cron in the file locator?</description>
 </ol>
 <p>Alternatively, you could actually use <code>command + shift + G</code> and typed in <code>/usr/sbin/</code> in the file locator (I just find it out today).</p>
 <p>That&rsquo;s it.</p>
-]]></content>
-		</item>
-		
-		<item>
-			<title>Productive Texts Processing OR Unifying Shortcuts between Platforms</title>
-			<link>https://dccxi.com/posts/shortcuts-for-texts/</link>
-			<pubDate>Sat, 02 Mar 2019 21:39:25 -0800</pubDate>
-			
-			<guid>https://dccxi.com/posts/shortcuts-for-texts/</guid>
-			<description>Handy shortcuts can boost up your productivity by a whole level. I have quite a few of those who empowered me to process texts more efficiently. Most of them are Emacs shortcuts that&amp;rsquo;s natively supported on Mac. Here is a list of the keybindings I use.
-   Action Keybinding (may be custom) Alternative Keys (same or similar)     Move to end of the line control + e end   Move to beginning of the line control + a home   Delete control + d del   Backspace control + h bs   Left (back) control + b left   Right (forward) control + f right   Up (previous) control + p up   Down (next) control + n down   Delete the rest of the line control + k N/A   Remove previous word control + w opt + bs   Remove next word control + q opt + del    Except for the last one, the keybindings mentioned above were natively supported on macOS.</description>
-			<content type="html"><![CDATA[<p>Handy shortcuts can boost up your productivity by a whole level. I have quite a few of those who empowered me to process texts more efficiently. Most of them are Emacs shortcuts that&rsquo;s natively supported on Mac. Here is a list of the keybindings I use.</p>
+]]></content></item><item><title>Productive Texts Processing OR Unifying Shortcuts between Platforms</title><link>https://dccxi.com/posts/shortcuts-for-texts/</link><pubDate>Sat, 02 Mar 2019 21:39:25 -0800</pubDate><guid>https://dccxi.com/posts/shortcuts-for-texts/</guid><description>Handy shortcuts can boost up your productivity by a whole level. I have quite a few of those who empowered me to process texts more efficiently. Most of them are Emacs shortcuts that&amp;rsquo;s natively supported on Mac. Here is a list of the keybindings I use.
+Action Keybinding (may be custom) Alternative Keys (same or similar) Move to end of the line control + e end Move to beginning of the line control + a home Delete control + d del Backspace control + h bs Left (back) control + b left Right (forward) control + f right Up (previous) control + p up Down (next) control + n down Delete the rest of the line control + k N/A Remove previous word control + w opt + bs Remove next word control + q opt + del Except for the last one, the keybindings mentioned above were natively supported on macOS.</description><content type="html"><![CDATA[<p>Handy shortcuts can boost up your productivity by a whole level. I have quite a few of those who empowered me to process texts more efficiently. Most of them are Emacs shortcuts that&rsquo;s natively supported on Mac. Here is a list of the keybindings I use.</p>
 <table>
 <thead>
 <tr>
@@ -425,8 +357,4 @@ No idea how to navigate to /usr/sbin/cron in the file locator?</description>
 , which made ChromeBooks productive as well (at least more than iPad Pro). Very interesting and inspiring device.</p>
 <h2 id="ios">iOS</h2>
 <p>You can get it that I&rsquo;m joking, right?</p>
-]]></content>
-		</item>
-		
-	</channel>
-</rss>
+]]></content></item></channel></rss>

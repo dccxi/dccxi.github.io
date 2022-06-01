@@ -1,93 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Tong Wu</title>
-    <link>https://dccxi.com/</link>
-    <description>Recent content on Tong Wu</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Sat, 16 May 2020 18:38:07 -0700</lastBuildDate><atom:link href="https://dccxi.com/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>十年学会编程 Teach Yourself Programming in Ten Years (Translation in Chinese)</title>
-      <link>https://dccxi.com/posts/21-days/</link>
-      <pubDate>Sat, 16 May 2020 18:38:07 -0700</pubDate>
-      
-      <guid>https://dccxi.com/posts/21-days/</guid>
-      <description>本篇为 Peter Norvig 的《Teach Yourself Programming in Ten Years》 之简体中文译稿，暂未取得原作者授权 This text is my translation of Peter Norvig&#39; s Teach Yourself Programming in Ten Years in Simplified Chinese. The translation wasn&amp;rsquo;t authorized by the original author yet. 为什么人</description>
-    </item>
-    
-    <item>
-      <title>Summary: Replicated Data Consistency Explained Through Baseball</title>
-      <link>https://dccxi.com/posts/summary-replicated-data-consistency/</link>
-      <pubDate>Wed, 20 Nov 2019 19:01:36 -0800</pubDate>
-      
-      <guid>https://dccxi.com/posts/summary-replicated-data-consistency/</guid>
-      <description>This post served as a part of my database design course (CMPE 226) project. It&amp;rsquo;s my understanding of the paper Replicated Data Consistency Explained Through Baseball .
- As the distributed system architecture has been widely used in cloud computing during recent years, it brings different needs for ensuring data consistency among the nodes in different conditions.
-Ideally, the distributed databases are better-off to be possessing the same content at the same time, as if they were a single node.</description>
-    </item>
-    
-    <item>
-      <title>Hi there</title>
-      <link>https://dccxi.com/me/</link>
-      <pubDate>Wed, 23 Oct 2019 02:19:09 -0700</pubDate>
-      
-      <guid>https://dccxi.com/me/</guid>
-      <description>My name is Tong Wu, a Software Engineer living in Bay Area, CA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tong Wu</title><link>https://dccxi.com/</link><description>Recent content on Tong Wu</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 16 May 2020 18:38:07 -0700</lastBuildDate><atom:link href="https://dccxi.com/index.xml" rel="self" type="application/rss+xml"/><item><title>十年学会编程 Teach Yourself Programming in Ten Years (Translation in Chinese)</title><link>https://dccxi.com/posts/21-days/</link><pubDate>Sat, 16 May 2020 18:38:07 -0700</pubDate><guid>https://dccxi.com/posts/21-days/</guid><description>本篇为 Peter Norvig 的《Teach Yourself Programming in Ten Years》 之简体中文译稿，暂未取得原作者授权 This text is my translation of Peter Norvig' s Teach Yourself Programming in Ten Years in Simplified Chinese. The translation wasn&amp;rsquo;t authorized by the original author yet. 为什么人</description></item><item><title>Summary: Replicated Data Consistency Explained Through Baseball</title><link>https://dccxi.com/posts/summary-replicated-data-consistency/</link><pubDate>Wed, 20 Nov 2019 19:01:36 -0800</pubDate><guid>https://dccxi.com/posts/summary-replicated-data-consistency/</guid><description>This post served as a part of my database design course (CMPE 226) project. It&amp;rsquo;s my understanding of the paper Replicated Data Consistency Explained Through Baseball .
+As the distributed system architecture has been widely used in cloud computing during recent years, it brings different needs for ensuring data consistency among the nodes in different conditions.
+Ideally, the distributed databases are better-off to be possessing the same content at the same time, as if they were a single node.</description></item><item><title>Hi there</title><link>https://dccxi.com/me/</link><pubDate>Wed, 23 Oct 2019 02:19:09 -0700</pubDate><guid>https://dccxi.com/me/</guid><description>My name is Tong Wu, a Software Engineer living in Bay Area, CA.
 If you are curious, this website is where I sometimes post my thoughts or ideas that I would like to share publicly. My posts could be found in this page .
-Instead of pasting my résumé here, I would like to list the things I like, in lexicographical order, so that you can freely compose my portrait in your head.</description>
-    </item>
-    
-    <item>
-      <title>If Your Album Artwork Not Showing Up in the New Music App on macOS Catalina after You Imported Everything</title>
-      <link>https://dccxi.com/posts/album-artwork-missing-catalina/</link>
-      <pubDate>Sun, 15 Sep 2019 01:14:03 -0700</pubDate>
-      
-      <guid>https://dccxi.com/posts/album-artwork-missing-catalina/</guid>
-      <description>Just delete the three sqlite database files inside ~/Library/Containers/com.apple.AMPArtworkAgent/Data/Documents/ (so that Music.app will rebuilt the artwork indexes database for you) and you are good to go.
- Maybe not, because before that, I also copied everything inside ~/Library/Containers/com.apple.AMPArtworkAgent/Data/Documents/artwork/ from the old machine to the new one. The sqlite database files are presumably responsible for maintaining the index between the artwork image files and the music files. Deleting them seems to be the only way I know to trigger the update after the manual import.</description>
-    </item>
-    
-    <item>
-      <title>On Contrarious Opinions</title>
-      <link>https://dccxi.com/posts/on-contrarious-opinions/</link>
-      <pubDate>Sun, 11 Aug 2019 17:48:33 -0700</pubDate>
-      
-      <guid>https://dccxi.com/posts/on-contrarious-opinions/</guid>
-      <description>This morning, I was reading the comments of the apology letter posted by Versace to kill some time before lunch. I didn&amp;rsquo;t read all of them obviously, but only the several dozens on the top at the time. It&amp;rsquo;s actually not surprising to notice that only very a few of them are focusing on the facts while the majority of them were just solely expressing their emotions.
-In case you missed out what happened in the last a few days, Versace was found mistakenly listed Hong Kong as well as Macau on a T-shirt as an independent sovereignty instead of a special administrative region of China, which is regarded as inappropriate considering nowadays international situation.</description>
-    </item>
-    
-    <item>
-      <title>If Any of Your Crontab Tasks No Longer Works on macOS Catalina</title>
-      <link>https://dccxi.com/posts/crontab-not-working-catalina/</link>
-      <pubDate>Tue, 06 Aug 2019 15:23:07 -0700</pubDate>
-      
-      <guid>https://dccxi.com/posts/crontab-not-working-catalina/</guid>
-      <description>It turns out to be a permission issue brought by the newly introduced security features, thus it&amp;rsquo;s not a &amp;ldquo;bUG&amp;rdquo;.
+Instead of pasting my résumé here, I would like to list the things I like, in lexicographical order, so that you can freely compose my portrait in your head.</description></item><item><title>If Your Album Artwork Not Showing Up in the New Music App on macOS Catalina after You Imported Everything</title><link>https://dccxi.com/posts/album-artwork-missing-catalina/</link><pubDate>Sun, 15 Sep 2019 01:14:03 -0700</pubDate><guid>https://dccxi.com/posts/album-artwork-missing-catalina/</guid><description>Just delete the three sqlite database files inside ~/Library/Containers/com.apple.AMPArtworkAgent/Data/Documents/ (so that Music.app will rebuilt the artwork indexes database for you) and you are good to go.
+Maybe not, because before that, I also copied everything inside ~/Library/Containers/com.apple.AMPArtworkAgent/Data/Documents/artwork/ from the old machine to the new one. The sqlite database files are presumably responsible for maintaining the index between the artwork image files and the music files. Deleting them seems to be the only way I know to trigger the update after the manual import.</description></item><item><title>On Contrarious Opinions</title><link>https://dccxi.com/posts/on-contrarious-opinions/</link><pubDate>Sun, 11 Aug 2019 17:48:33 -0700</pubDate><guid>https://dccxi.com/posts/on-contrarious-opinions/</guid><description>This morning, I was reading the comments of the apology letter posted by Versace to kill some time before lunch. I didn&amp;rsquo;t read all of them obviously, but only the several dozens on the top at the time. It&amp;rsquo;s actually not surprising to notice that only very a few of them are focusing on the facts while the majority of them were just solely expressing their emotions.
+In case you missed out what happened in the last a few days, Versace was found mistakenly listed Hong Kong as well as Macau on a T-shirt as an independent sovereignty instead of a special administrative region of China, which is regarded as inappropriate considering nowadays international situation.</description></item><item><title>If Any of Your Crontab Tasks No Longer Works on macOS Catalina</title><link>https://dccxi.com/posts/crontab-not-working-catalina/</link><pubDate>Tue, 06 Aug 2019 15:23:07 -0700</pubDate><guid>https://dccxi.com/posts/crontab-not-working-catalina/</guid><description>It turns out to be a permission issue brought by the newly introduced security features, thus it&amp;rsquo;s not a &amp;ldquo;bUG&amp;rdquo;.
 To solve it, just add your cron location (in most cases /usr/sbin/cron) to the Full Disk Access lists located at System Preferences.app -&amp;gt; Security &amp;amp; Privacy -&amp;gt; Privacy -&amp;gt; Full Disk Access. &amp;ldquo;Click the lock to make changes&amp;rdquo; and &amp;ldquo;+&amp;rdquo; to navigate to your cron location.
-No idea how to navigate to /usr/sbin/cron in the file locator?</description>
-    </item>
-    
-    <item>
-      <title>Projects</title>
-      <link>https://dccxi.com/projects/</link>
-      <pubDate>Sat, 02 Mar 2019 22:03:39 -0800</pubDate>
-      
-      <guid>https://dccxi.com/projects/</guid>
-      <description>The Evolution of Trust (zh-CN) - Link - GitHub Pin - Yet Another Shuangpin Learning Practice Tool - 🚧 - (not yet published) </description>
-    </item>
-    
-    <item>
-      <title>Productive Texts Processing OR Unifying Shortcuts between Platforms</title>
-      <link>https://dccxi.com/posts/shortcuts-for-texts/</link>
-      <pubDate>Sat, 02 Mar 2019 21:39:25 -0800</pubDate>
-      
-      <guid>https://dccxi.com/posts/shortcuts-for-texts/</guid>
-      <description>Handy shortcuts can boost up your productivity by a whole level. I have quite a few of those who empowered me to process texts more efficiently. Most of them are Emacs shortcuts that&amp;rsquo;s natively supported on Mac. Here is a list of the keybindings I use.
-   Action Keybinding (may be custom) Alternative Keys (same or similar)     Move to end of the line control + e end   Move to beginning of the line control + a home   Delete control + d del   Backspace control + h bs   Left (back) control + b left   Right (forward) control + f right   Up (previous) control + p up   Down (next) control + n down   Delete the rest of the line control + k N/A   Remove previous word control + w opt + bs   Remove next word control + q opt + del    Except for the last one, the keybindings mentioned above were natively supported on macOS.</description>
-    </item>
-    
-  </channel>
-</rss>
+No idea how to navigate to /usr/sbin/cron in the file locator?</description></item><item><title>Projects</title><link>https://dccxi.com/projects/</link><pubDate>Sat, 02 Mar 2019 22:03:39 -0800</pubDate><guid>https://dccxi.com/projects/</guid><description>The Evolution of Trust (zh-CN) - Link - GitHub Pin - Yet Another Shuangpin Learning Practice Tool - 🚧 - (not yet published)</description></item><item><title>Productive Texts Processing OR Unifying Shortcuts between Platforms</title><link>https://dccxi.com/posts/shortcuts-for-texts/</link><pubDate>Sat, 02 Mar 2019 21:39:25 -0800</pubDate><guid>https://dccxi.com/posts/shortcuts-for-texts/</guid><description>Handy shortcuts can boost up your productivity by a whole level. I have quite a few of those who empowered me to process texts more efficiently. Most of them are Emacs shortcuts that&amp;rsquo;s natively supported on Mac. Here is a list of the keybindings I use.
+Action Keybinding (may be custom) Alternative Keys (same or similar) Move to end of the line control + e end Move to beginning of the line control + a home Delete control + d del Backspace control + h bs Left (back) control + b left Right (forward) control + f right Up (previous) control + p up Down (next) control + n down Delete the rest of the line control + k N/A Remove previous word control + w opt + bs Remove next word control + q opt + del Except for the last one, the keybindings mentioned above were natively supported on macOS.</description></item></channel></rss>

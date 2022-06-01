@@ -1,84 +1,72 @@
-<!DOCTYPE html>
-<html lang="en-us">
-
+<!doctype html><html lang=en-us>
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="theme-color" content="#35363a">
-	<meta name="msapplication-TileColor" content="#35363a">
-<meta itemprop="name" content="If Any of Your Crontab Tasks No Longer Works on macOS Catalina">
-<meta itemprop="description" content="It turns out to be a permission issue brought by the newly introduced security features, thus it&rsquo;s not a &ldquo;bUG&rdquo;.
-To solve it, just add your cron location (in most cases /usr/sbin/cron) to the Full Disk Access lists located at System Preferences.app -&gt; Security &amp; Privacy -&gt; Privacy -&gt; Full Disk Access. &ldquo;Click the lock to make changes&rdquo; and &ldquo;&#43;&rdquo; to navigate to your cron location.
-No idea how to navigate to /usr/sbin/cron in the file locator?"><meta itemprop="datePublished" content="2019-08-06T15:23:07-07:00" />
-<meta itemprop="dateModified" content="2019-08-06T15:23:07-07:00" />
-<meta itemprop="wordCount" content="154">
-<meta itemprop="keywords" content="" /><meta property="og:title" content="If Any of Your Crontab Tasks No Longer Works on macOS Catalina" />
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<meta name=theme-color content="#35363a">
+<meta name=msapplication-TileColor content="#35363a">
+<meta itemprop=name content="If Any of Your Crontab Tasks No Longer Works on macOS Catalina">
+<meta itemprop=description content="It turns out to be a permission issue brought by the newly introduced security features, thus it&rsquo;s not a &ldquo;bUG&rdquo;.
+To solve it, just add your cron location (in most cases /usr/sbin/cron) to the Full Disk Access lists located at System Preferences.app -> Security & Privacy -> Privacy -> Full Disk Access. &ldquo;Click the lock to make changes&rdquo; and &ldquo;+&rdquo; to navigate to your cron location.
+No idea how to navigate to /usr/sbin/cron in the file locator?"><meta itemprop=datePublished content="2019-08-06T15:23:07-07:00">
+<meta itemprop=dateModified content="2019-08-06T15:23:07-07:00">
+<meta itemprop=wordCount content="154">
+<meta itemprop=keywords content><meta property="og:title" content="If Any of Your Crontab Tasks No Longer Works on macOS Catalina">
 <meta property="og:description" content="It turns out to be a permission issue brought by the newly introduced security features, thus it&rsquo;s not a &ldquo;bUG&rdquo;.
-To solve it, just add your cron location (in most cases /usr/sbin/cron) to the Full Disk Access lists located at System Preferences.app -&gt; Security &amp; Privacy -&gt; Privacy -&gt; Full Disk Access. &ldquo;Click the lock to make changes&rdquo; and &ldquo;&#43;&rdquo; to navigate to your cron location.
-No idea how to navigate to /usr/sbin/cron in the file locator?" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://dccxi.com/posts/crontab-not-working-catalina/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2019-08-06T15:23:07-07:00" />
-<meta property="article:modified_time" content="2019-08-06T15:23:07-07:00" />
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="If Any of Your Crontab Tasks No Longer Works on macOS Catalina"/>
-<meta name="twitter:description" content="It turns out to be a permission issue brought by the newly introduced security features, thus it&rsquo;s not a &ldquo;bUG&rdquo;.
-To solve it, just add your cron location (in most cases /usr/sbin/cron) to the Full Disk Access lists located at System Preferences.app -&gt; Security &amp; Privacy -&gt; Privacy -&gt; Full Disk Access. &ldquo;Click the lock to make changes&rdquo; and &ldquo;&#43;&rdquo; to navigate to your cron location.
-No idea how to navigate to /usr/sbin/cron in the file locator?"/>
-
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-	<link rel="manifest" href="/site.webmanifest">
-	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
-	<link rel="shortcut icon" href="/favicon.ico">
-
-	<title>If Any of Your Crontab Tasks No Longer Works on macOS Catalina</title>
-	<link rel="stylesheet" href="https://dccxi.com/css/style.min.28af16d3bc817b639f2642cbcf587b5a3377aab44b32c1151b2658fdb713b0d7.css" integrity="sha256-KK8W07yBe2OfJkLLz1h7WjN3qrRLMsEVGyZY/bcTsNc=" crossorigin="anonymous">
-	
+To solve it, just add your cron location (in most cases /usr/sbin/cron) to the Full Disk Access lists located at System Preferences.app -> Security & Privacy -> Privacy -> Full Disk Access. &ldquo;Click the lock to make changes&rdquo; and &ldquo;+&rdquo; to navigate to your cron location.
+No idea how to navigate to /usr/sbin/cron in the file locator?">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dccxi.com/posts/crontab-not-working-catalina/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2019-08-06T15:23:07-07:00">
+<meta property="article:modified_time" content="2019-08-06T15:23:07-07:00">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="If Any of Your Crontab Tasks No Longer Works on macOS Catalina">
+<meta name=twitter:description content="It turns out to be a permission issue brought by the newly introduced security features, thus it&rsquo;s not a &ldquo;bUG&rdquo;.
+To solve it, just add your cron location (in most cases /usr/sbin/cron) to the Full Disk Access lists located at System Preferences.app -> Security & Privacy -> Privacy -> Full Disk Access. &ldquo;Click the lock to make changes&rdquo; and &ldquo;+&rdquo; to navigate to your cron location.
+No idea how to navigate to /usr/sbin/cron in the file locator?">
+<link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
+<link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
+<link rel=manifest href=/site.webmanifest>
+<link rel=mask-icon href=/safari-pinned-tab.svg color>
+<link rel="shortcut icon" href=/favicon.ico>
+<title>If Any of Your Crontab Tasks No Longer Works on macOS Catalina</title>
+<link rel=stylesheet href=https://dccxi.com/css/style.min.28af16d3bc817b639f2642cbcf587b5a3377aab44b32c1151b2658fdb713b0d7.css integrity="sha256-KK8W07yBe2OfJkLLz1h7WjN3qrRLMsEVGyZY/bcTsNc=" crossorigin=anonymous>
 </head>
-
-<body id="page">
-	
-	<header id="site-header" class="animated slideInUp">
-		<div class="hdr-wrapper section-inner">
-			<div class="hdr-left">
-				<div class="site-branding">
-					<a href="https://dccxi.com">Tong Wu</a>
-				</div>
-				<nav class="site-nav hide-in-mobile">
-					
-				<a href="https://dccxi.com/posts/">Posts</a>
-				<a href="https://dccxi.com/projects/">Projects</a>
-				<a href="https://dccxi.com/me/">Me</a>
-
-				</nav>
-			</div>
-			<div class="hdr-right hdr-icons">
-				<span class="hdr-social hide-in-mobile"><a href="https://telegram.me/dccxi" target="_blank" rel="noopener me" title="Telegram"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.198 2.433a2.242 2.242 0 0 0-1.022.215l-8.609 3.33c-2.068.8-4.133 1.598-5.724 2.21a405.15 405.15 0 0 1-2.849 1.09c-.42.147-.99.332-1.473.901-.728.968.193 1.798.919 2.286 1.61.516 3.275 1.009 4.654 1.472.509 1.793.997 3.592 1.48 5.388.16.36.506.494.864.498l-.002.018s.281.028.555-.038a2.1 2.1 0 0 0 .933-.517c.345-.324 1.28-1.244 1.811-1.764l3.999 2.952.032.018s.442.311 1.09.355c.324.022.75-.04 1.116-.308.37-.27.613-.702.728-1.196.342-1.492 2.61-12.285 2.997-14.072l-.01.042c.27-1.006.17-1.928-.455-2.474a1.654 1.654 0 0 0-1.034-.407z"/></svg></a><a href="https://github.com/dccxi" target="_blank" rel="noopener me" title="Github"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a><a href="https://www.linkedin.com/in/wu-tong/" target="_blank" rel="noopener me" title="Linkedin"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a><a href="mailto:tongwu@live.com" target="_blank" rel="noopener me" title="Email"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a><a href="https://www.youtube.com/channel/UC5eoSLuTWm8zJD-q1d3-Bww/" target="_blank" rel="noopener me" title="Youtube"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a><a href="https://user-images.githubusercontent.com/7568396/94640657-2559f580-0294-11eb-943f-df847b30d61b.png" target="_blank" rel="noopener me" title="Wechat"><svg xmlns="http://www.w3.org/2000/svg" class="feather feather-message-circle" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></a></span><button id="menu-btn" class="hdr-btn" title="Menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
-			</div>
-		</div>
-	</header>
-	<div id="mobile-menu" class="animated fast">
-		<ul>
-			<li><a href="https://dccxi.com/posts/">Posts</a></li>
-			<li><a href="https://dccxi.com/projects/">Projects</a></li>
-			<li><a href="https://dccxi.com/me/">Me</a></li>
-		</ul>
-	</div>
-
-
-	<main class="site-main section-inner animated fadeIn faster">
-		<article class="thin">
-			<header class="post-header">
-				<div class="post-meta"><span>Aug 6, 2019</span></div>
-				<h1>If Any of Your Crontab Tasks No Longer Works on macOS Catalina</h1>
-			</header>
-			<div class="content">
-				<p>It turns out to be a permission issue brought by the newly introduced security features, thus it&rsquo;s not a &ldquo;bUG&rdquo;.</p>
-<p>To solve it, just add your <code>cron</code> location (in most cases <code>/usr/sbin/cron</code>) to the <strong>Full Disk Access</strong> lists located at <code>System Preferences.app -&gt; Security &amp; Privacy -&gt; Privacy -&gt; Full Disk Access</code>.
+<body id=page>
+<header id=site-header class="animated slideInUp">
+<div class="hdr-wrapper section-inner">
+<div class=hdr-left>
+<div class=site-branding>
+<a href=https://dccxi.com>Tong Wu</a>
+</div>
+<nav class="site-nav hide-in-mobile">
+<a href=https://dccxi.com/posts/>Posts</a>
+<a href=https://dccxi.com/projects/>Projects</a>
+<a href=https://dccxi.com/me/>Me</a>
+</nav>
+</div>
+<div class="hdr-right hdr-icons">
+<span class="hdr-social hide-in-mobile"><a href=https://telegram.me/dccxi target=_blank rel="noopener me" title=Telegram><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.198 2.433a2.242 2.242.0 00-1.022.215l-8.609 3.33c-2.068.8-4.133 1.598-5.724 2.21a405.15 405.15.0 01-2.849 1.09c-.42.147-.99.332-1.473.901-.728.968.193 1.798.919 2.286 1.61.516 3.275 1.009 4.654 1.472.509 1.793.997 3.592 1.48 5.388.16.36.506.494.864.498l-.002.018s.281.028.555-.038a2.1 2.1.0 00.933-.517c.345-.324 1.28-1.244 1.811-1.764l3.999 2.952.032.018s.442.311 1.09.355c.324.022.75-.04 1.116-.308.37-.27.613-.702.728-1.196.342-1.492 2.61-12.285 2.997-14.072l-.01.042c.27-1.006.17-1.928-.455-2.474a1.654 1.654.0 00-1.034-.407z"/></svg></a><a href=https://github.com/dccxi target=_blank rel="noopener me" title=Github><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37.0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44.0 0020 4.77 5.07 5.07.0 0019.91 1S18.73.65 16 2.48a13.38 13.38.0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07.0 005 4.77 5.44 5.44.0 003.5 8.55c0 5.42 3.3 6.61 6.44 7A3.37 3.37.0 009 18.13V22"/></svg></a><a href=https://www.linkedin.com/in/wu-tong/ target=_blank rel="noopener me" title=Linkedin><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a><a href=mailto:tongwu@live.com target=_blank rel="noopener me" title=Email><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1.0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1.0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a><a href=https://www.youtube.com/channel/UC5eoSLuTWm8zJD-q1d3-Bww/ target=_blank rel="noopener me" title=Youtube><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78.0 00-1.94-2C18.88 4 12 4 12 4s-6.88.0-8.6.46a2.78 2.78.0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78.0 003.4 19c1.72.46 8.6.46 8.6.46s6.88.0 8.6-.46a2.78 2.78.0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a><a href=https://user-images.githubusercontent.com/7568396/94640657-2559f580-0294-11eb-943f-df847b30d61b.png target=_blank rel="noopener me" title=Wechat><svg xmlns="http://www.w3.org/2000/svg" class="feather feather-message-circle" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38.0 01-.9 3.8A8.5 8.5.0 0112.5 20a8.38 8.38.0 01-3.8-.9L3 21l1.9-5.7A8.38 8.38.0 014 11.5a8.5 8.5.0 014.7-7.6 8.38 8.38.0 013.8-.9h.5a8.48 8.48.0 018 8v.5z"/></svg></a></span><button id=menu-btn class=hdr-btn title=Menu><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+</div>
+</div>
+</header>
+<div id=mobile-menu class="animated fast">
+<ul>
+<li><a href=https://dccxi.com/posts/>Posts</a></li>
+<li><a href=https://dccxi.com/projects/>Projects</a></li>
+<li><a href=https://dccxi.com/me/>Me</a></li>
+</ul>
+</div>
+<main class="site-main section-inner animated fadeIn faster">
+<article class=thin>
+<header class=post-header>
+<div class=post-meta><span>Aug 6, 2019</span></div>
+<h1>If Any of Your Crontab Tasks No Longer Works on macOS Catalina</h1>
+</header>
+<div class=content>
+<p>It turns out to be a permission issue brought by the newly introduced security features, thus it&rsquo;s not a &ldquo;bUG&rdquo;.</p>
+<p>To solve it, just add your <code>cron</code> location (in most cases <code>/usr/sbin/cron</code>) to the <strong>Full Disk Access</strong> lists located at <code>System Preferences.app -> Security & Privacy -> Privacy -> Full Disk Access</code>.
 &ldquo;Click the lock to make changes&rdquo; and &ldquo;+&rdquo; to navigate to your <code>cron</code> location.</p>
 <p>No idea how to navigate to <code>/usr/sbin/cron</code> in the file locator? Do this:</p>
 <ol>
@@ -90,49 +78,32 @@ No idea how to navigate to /usr/sbin/cron in the file locator?"/>
 </ol>
 <p>Alternatively, you could actually use <code>command + shift + G</code> and typed in <code>/usr/sbin/</code> in the file locator (I just find it out today).</p>
 <p>That&rsquo;s it.</p>
-
-			</div>
-			<hr class="post-end">
-			<footer class="post-info">
-				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>154 Words</p>
-				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-08-06 15:23 -0700</p>
-			</footer>
-		</article>
-		<div class="post-nav thin">
-			<a class="next-post" href="https://dccxi.com/posts/on-contrarious-opinions/">
-				<span class="post-nav-label"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>&nbsp;Newer</span><br><span>On Contrarious Opinions</span>
-			</a>
-			<a class="prev-post" href="https://dccxi.com/posts/shortcuts-for-texts/">
-				<span class="post-nav-label">Older&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span><br><span>Productive Texts Processing OR Unifying Shortcuts between Platforms</span>
-			</a>
-		</div>
-		<div id="comments" class="thin">
 </div>
-	</main>
-
-	<footer id="site-footer" class="section-inner thin animated fadeIn faster">
-		<p>&copy; 2022 <a href="https://dccxi.com">Tong Wu</a> &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></p>
-		<p>
-			Made with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &#183; Theme <a href="https://github.com/Track3/hermit" target="_blank" rel="noopener">Hermit</a> &#183; <a href="https://dccxi.com/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
-		</p>
-	</footer>
-
-
-
-	<script src="https://dccxi.com/js/bundle.min.7d8545daa55d62427355498dd8da13f98ff79a7938ce7d2a5e2ae1ec0de3beb8.js" integrity="sha256-fYVF2qVdYkJzVUmN2NoT+Y/3mnk4zn0qXirh7A3jvrg=" crossorigin="anonymous"></script>
-	
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-103634952-2', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
-
+<hr class=post-end>
+<footer class=post-info>
+<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6A2 2 0 004 4v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>154 Words</p>
+<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>2019-08-06 15:23 -0700</p>
+</footer>
+</article>
+<div class="post-nav thin">
+<a class=next-post href=https://dccxi.com/posts/on-contrarious-opinions/>
+<span class=post-nav-label><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>&nbsp;Newer</span><br><span>On Contrarious Opinions</span>
+</a>
+<a class=prev-post href=https://dccxi.com/posts/shortcuts-for-texts/>
+<span class=post-nav-label>Older&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span><br><span>Productive Texts Processing OR Unifying Shortcuts between Platforms</span>
+</a>
+</div>
+<div id=comments class=thin>
+</div>
+</main>
+<footer id=site-footer class="section-inner thin animated fadeIn faster">
+<p>&copy; 2022 <a href=https://dccxi.com>Tong Wu</a> &#183; <a href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank rel=noopener>CC BY-NC 4.0</a></p>
+<p>
+Made with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> &#183; Theme <a href=https://github.com/Track3/hermit target=_blank rel=noopener>Hermit</a> &#183; <a href=https://dccxi.com/posts/index.xml target=_blank title=rss><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 019 9"/><path d="M4 4a16 16 0 0116 16"/><circle cx="5" cy="19" r="1"/></svg></a>
+</p>
+</footer>
+<script src=https://dccxi.com/js/bundle.min.7d8545daa55d62427355498dd8da13f98ff79a7938ce7d2a5e2ae1ec0de3beb8.js integrity="sha256-fYVF2qVdYkJzVUmN2NoT+Y/3mnk4zn0qXirh7A3jvrg=" crossorigin=anonymous></script>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-103634952-2','auto'),ga('send','pageview'))</script>
+<script async src=https://www.google-analytics.com/analytics.js></script>
 </body>
-
 </html>

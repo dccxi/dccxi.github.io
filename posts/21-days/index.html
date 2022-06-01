@@ -1,314 +1,285 @@
-<!DOCTYPE html>
-<html lang="en-us">
-
+<!doctype html><html lang=en-us>
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="theme-color" content="#35363a">
-	<meta name="msapplication-TileColor" content="#35363a">
-<meta itemprop="name" content="十年学会编程 Teach Yourself Programming in Ten Years (Translation in Chinese)">
-<meta itemprop="description" content="本篇为 Peter Norvig 的《Teach Yourself Programming in Ten Years》 之简体中文译稿，暂未取得原作者授权 This text is my translation of Peter Norvig&#39; s Teach Yourself Programming in Ten Years in Simplified Chinese. The translation wasn&rsquo;t authorized by the original author yet. 为什么人"><meta itemprop="datePublished" content="2020-05-16T18:38:07-07:00" />
-<meta itemprop="dateModified" content="2020-05-16T18:38:07-07:00" />
-<meta itemprop="wordCount" content="5443">
-<meta itemprop="keywords" content="" /><meta property="og:title" content="十年学会编程 Teach Yourself Programming in Ten Years (Translation in Chinese)" />
-<meta property="og:description" content="本篇为 Peter Norvig 的《Teach Yourself Programming in Ten Years》 之简体中文译稿，暂未取得原作者授权 This text is my translation of Peter Norvig&#39; s Teach Yourself Programming in Ten Years in Simplified Chinese. The translation wasn&rsquo;t authorized by the original author yet. 为什么人" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://dccxi.com/posts/21-days/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2020-05-16T18:38:07-07:00" />
-<meta property="article:modified_time" content="2020-05-16T18:38:07-07:00" />
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="十年学会编程 Teach Yourself Programming in Ten Years (Translation in Chinese)"/>
-<meta name="twitter:description" content="本篇为 Peter Norvig 的《Teach Yourself Programming in Ten Years》 之简体中文译稿，暂未取得原作者授权 This text is my translation of Peter Norvig&#39; s Teach Yourself Programming in Ten Years in Simplified Chinese. The translation wasn&rsquo;t authorized by the original author yet. 为什么人"/>
-
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-	<link rel="manifest" href="/site.webmanifest">
-	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
-	<link rel="shortcut icon" href="/favicon.ico">
-
-	<title>十年学会编程 Teach Yourself Programming in Ten Years (Translation in Chinese)</title>
-	<link rel="stylesheet" href="https://dccxi.com/css/style.min.28af16d3bc817b639f2642cbcf587b5a3377aab44b32c1151b2658fdb713b0d7.css" integrity="sha256-KK8W07yBe2OfJkLLz1h7WjN3qrRLMsEVGyZY/bcTsNc=" crossorigin="anonymous">
-	
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<meta name=theme-color content="#35363a">
+<meta name=msapplication-TileColor content="#35363a">
+<meta itemprop=name content="十年学会编程 Teach Yourself Programming in Ten Years (Translation in Chinese)">
+<meta itemprop=description content="本篇为 Peter Norvig 的《Teach Yourself Programming in Ten Years》 之简体中文译稿，暂未取得原作者授权 This text is my translation of Peter Norvig' s Teach Yourself Programming in Ten Years in Simplified Chinese. The translation wasn&rsquo;t authorized by the original author yet. 为什么人"><meta itemprop=datePublished content="2020-05-16T18:38:07-07:00">
+<meta itemprop=dateModified content="2020-05-16T18:38:07-07:00">
+<meta itemprop=wordCount content="5443">
+<meta itemprop=keywords content><meta property="og:title" content="十年学会编程 Teach Yourself Programming in Ten Years (Translation in Chinese)">
+<meta property="og:description" content="本篇为 Peter Norvig 的《Teach Yourself Programming in Ten Years》 之简体中文译稿，暂未取得原作者授权 This text is my translation of Peter Norvig' s Teach Yourself Programming in Ten Years in Simplified Chinese. The translation wasn&rsquo;t authorized by the original author yet. 为什么人">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dccxi.com/posts/21-days/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2020-05-16T18:38:07-07:00">
+<meta property="article:modified_time" content="2020-05-16T18:38:07-07:00">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="十年学会编程 Teach Yourself Programming in Ten Years (Translation in Chinese)">
+<meta name=twitter:description content="本篇为 Peter Norvig 的《Teach Yourself Programming in Ten Years》 之简体中文译稿，暂未取得原作者授权 This text is my translation of Peter Norvig' s Teach Yourself Programming in Ten Years in Simplified Chinese. The translation wasn&rsquo;t authorized by the original author yet. 为什么人">
+<link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
+<link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
+<link rel=manifest href=/site.webmanifest>
+<link rel=mask-icon href=/safari-pinned-tab.svg color>
+<link rel="shortcut icon" href=/favicon.ico>
+<title>十年学会编程 Teach Yourself Programming in Ten Years (Translation in Chinese)</title>
+<link rel=stylesheet href=https://dccxi.com/css/style.min.28af16d3bc817b639f2642cbcf587b5a3377aab44b32c1151b2658fdb713b0d7.css integrity="sha256-KK8W07yBe2OfJkLLz1h7WjN3qrRLMsEVGyZY/bcTsNc=" crossorigin=anonymous>
 </head>
-
-<body id="page">
-	
-	<header id="site-header" class="animated slideInUp">
-		<div class="hdr-wrapper section-inner">
-			<div class="hdr-left">
-				<div class="site-branding">
-					<a href="https://dccxi.com">Tong Wu</a>
-				</div>
-				<nav class="site-nav hide-in-mobile">
-					
-				<a href="https://dccxi.com/posts/">Posts</a>
-				<a href="https://dccxi.com/projects/">Projects</a>
-				<a href="https://dccxi.com/me/">Me</a>
-
-				</nav>
-			</div>
-			<div class="hdr-right hdr-icons">
-				<span class="hdr-social hide-in-mobile"><a href="https://telegram.me/dccxi" target="_blank" rel="noopener me" title="Telegram"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.198 2.433a2.242 2.242 0 0 0-1.022.215l-8.609 3.33c-2.068.8-4.133 1.598-5.724 2.21a405.15 405.15 0 0 1-2.849 1.09c-.42.147-.99.332-1.473.901-.728.968.193 1.798.919 2.286 1.61.516 3.275 1.009 4.654 1.472.509 1.793.997 3.592 1.48 5.388.16.36.506.494.864.498l-.002.018s.281.028.555-.038a2.1 2.1 0 0 0 .933-.517c.345-.324 1.28-1.244 1.811-1.764l3.999 2.952.032.018s.442.311 1.09.355c.324.022.75-.04 1.116-.308.37-.27.613-.702.728-1.196.342-1.492 2.61-12.285 2.997-14.072l-.01.042c.27-1.006.17-1.928-.455-2.474a1.654 1.654 0 0 0-1.034-.407z"/></svg></a><a href="https://github.com/dccxi" target="_blank" rel="noopener me" title="Github"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a><a href="https://www.linkedin.com/in/wu-tong/" target="_blank" rel="noopener me" title="Linkedin"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a><a href="mailto:tongwu@live.com" target="_blank" rel="noopener me" title="Email"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a><a href="https://www.youtube.com/channel/UC5eoSLuTWm8zJD-q1d3-Bww/" target="_blank" rel="noopener me" title="Youtube"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a><a href="https://user-images.githubusercontent.com/7568396/94640657-2559f580-0294-11eb-943f-df847b30d61b.png" target="_blank" rel="noopener me" title="Wechat"><svg xmlns="http://www.w3.org/2000/svg" class="feather feather-message-circle" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></a></span><button id="menu-btn" class="hdr-btn" title="Menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
-			</div>
-		</div>
-	</header>
-	<div id="mobile-menu" class="animated fast">
-		<ul>
-			<li><a href="https://dccxi.com/posts/">Posts</a></li>
-			<li><a href="https://dccxi.com/projects/">Projects</a></li>
-			<li><a href="https://dccxi.com/me/">Me</a></li>
-		</ul>
-	</div>
-
-
-	<main class="site-main section-inner animated fadeIn faster">
-		<article class="thin">
-			<header class="post-header">
-				<div class="post-meta"><span>May 16, 2020</span></div>
-				<h1>十年学会编程 Teach Yourself Programming in Ten Years (Translation in Chinese)</h1>
-			</header>
-			<div class="content">
-				<p>本篇为 <a href="http://www.norvig.com/" target="_blank">Peter Norvig</a>
- 的<a href="https://web.archive.org/web/20200510184221/http://www.norvig.com/21-days.html" target="_blank">《Teach Yourself Programming in Ten Years》</a>
+<body id=page>
+<header id=site-header class="animated slideInUp">
+<div class="hdr-wrapper section-inner">
+<div class=hdr-left>
+<div class=site-branding>
+<a href=https://dccxi.com>Tong Wu</a>
+</div>
+<nav class="site-nav hide-in-mobile">
+<a href=https://dccxi.com/posts/>Posts</a>
+<a href=https://dccxi.com/projects/>Projects</a>
+<a href=https://dccxi.com/me/>Me</a>
+</nav>
+</div>
+<div class="hdr-right hdr-icons">
+<span class="hdr-social hide-in-mobile"><a href=https://telegram.me/dccxi target=_blank rel="noopener me" title=Telegram><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.198 2.433a2.242 2.242.0 00-1.022.215l-8.609 3.33c-2.068.8-4.133 1.598-5.724 2.21a405.15 405.15.0 01-2.849 1.09c-.42.147-.99.332-1.473.901-.728.968.193 1.798.919 2.286 1.61.516 3.275 1.009 4.654 1.472.509 1.793.997 3.592 1.48 5.388.16.36.506.494.864.498l-.002.018s.281.028.555-.038a2.1 2.1.0 00.933-.517c.345-.324 1.28-1.244 1.811-1.764l3.999 2.952.032.018s.442.311 1.09.355c.324.022.75-.04 1.116-.308.37-.27.613-.702.728-1.196.342-1.492 2.61-12.285 2.997-14.072l-.01.042c.27-1.006.17-1.928-.455-2.474a1.654 1.654.0 00-1.034-.407z"/></svg></a><a href=https://github.com/dccxi target=_blank rel="noopener me" title=Github><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37.0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44.0 0020 4.77 5.07 5.07.0 0019.91 1S18.73.65 16 2.48a13.38 13.38.0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07.0 005 4.77 5.44 5.44.0 003.5 8.55c0 5.42 3.3 6.61 6.44 7A3.37 3.37.0 009 18.13V22"/></svg></a><a href=https://www.linkedin.com/in/wu-tong/ target=_blank rel="noopener me" title=Linkedin><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a><a href=mailto:tongwu@live.com target=_blank rel="noopener me" title=Email><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1.0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1.0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a><a href=https://www.youtube.com/channel/UC5eoSLuTWm8zJD-q1d3-Bww/ target=_blank rel="noopener me" title=Youtube><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78.0 00-1.94-2C18.88 4 12 4 12 4s-6.88.0-8.6.46a2.78 2.78.0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78.0 003.4 19c1.72.46 8.6.46 8.6.46s6.88.0 8.6-.46a2.78 2.78.0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a><a href=https://user-images.githubusercontent.com/7568396/94640657-2559f580-0294-11eb-943f-df847b30d61b.png target=_blank rel="noopener me" title=Wechat><svg xmlns="http://www.w3.org/2000/svg" class="feather feather-message-circle" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38.0 01-.9 3.8A8.5 8.5.0 0112.5 20a8.38 8.38.0 01-3.8-.9L3 21l1.9-5.7A8.38 8.38.0 014 11.5a8.5 8.5.0 014.7-7.6 8.38 8.38.0 013.8-.9h.5a8.48 8.48.0 018 8v.5z"/></svg></a></span><button id=menu-btn class=hdr-btn title=Menu><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+</div>
+</div>
+</header>
+<div id=mobile-menu class="animated fast">
+<ul>
+<li><a href=https://dccxi.com/posts/>Posts</a></li>
+<li><a href=https://dccxi.com/projects/>Projects</a></li>
+<li><a href=https://dccxi.com/me/>Me</a></li>
+</ul>
+</div>
+<main class="site-main section-inner animated fadeIn faster">
+<article class=thin>
+<header class=post-header>
+<div class=post-meta><span>May 16, 2020</span></div>
+<h1>十年学会编程 Teach Yourself Programming in Ten Years (Translation in Chinese)</h1>
+</header>
+<div class=content>
+<p>本篇为 <a href=http://www.norvig.com/ target=_blank>Peter Norvig</a>
+的<a href=https://web.archive.org/web/20200510184221/http://www.norvig.com/21-days.html target=_blank>《Teach Yourself Programming in Ten Years》</a>
 之简体中文译稿，暂未取得原作者授权</p>
-<p>This text is my translation of <a href="http://www.norvig.com/" target="_blank">Peter Norvig'</a>
-s <em><a href="https://web.archive.org/web/20200510184221/http://www.norvig.com/21-days.html" target="_blank">Teach Yourself Programming in Ten Years</a>
+<p>This text is my translation of <a href=http://www.norvig.com/ target=_blank>Peter Norvig'</a>
+s <em><a href=https://web.archive.org/web/20200510184221/http://www.norvig.com/21-days.html target=_blank>Teach Yourself Programming in Ten Years</a>
 </em> in Simplified Chinese. The translation wasn&rsquo;t authorized by the original author yet.</p>
 <hr>
-<h2 id="为什么人人都这么匆忙">为什么人人都这么匆忙？<a href="#为什么人人都这么匆忙" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
-<p>当你走进任何一家书店，你总会看到一本《24 小时学会 Java》，以及无数本将不同时间（从几小时到几天）与技能（C、SQL、Ruby、算法等等）排列组合所得到类似标题的书籍。使用亚马逊的高级搜索来寻找 <a href="http://www.amazon.com/gp/search/ref=sr_adv_b/?search-alias=stripbooks&amp;unfiltered=1&amp;field-keywords=&amp;field-author=&amp;field-title=teach&#43;yourself&#43;hours&amp;field-isbn=&amp;field-publisher=&amp;node=&amp;field-p_n_condition-type=&amp;field-feature_browse-bin=&amp;field-subject=&amp;field-language=&amp;field-dateop=After&amp;field-datemod=&amp;field-dateyear=2000&amp;sort=relevanceexprank&amp;Adv-Srch-Books-Submit.x=16&amp;Adv-Srch-Books-Submit.y=5" target="_blank">2000 年后出版的标题含有「小时」、「学会」等字样</a>
+<h2 id=为什么人人都这么匆忙>为什么人人都这么匆忙？<a href=#为什么人人都这么匆忙 class=anchor aria-hidden=true><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3"/><line x1="8" y1="12" x2="16" y2="12"/></svg></a></h2>
+<p>当你走进任何一家书店，你总会看到一本《24 小时学会 Java》，以及无数本将不同时间（从几小时到几天）与技能（C、SQL、Ruby、算法等等）排列组合所得到类似标题的书籍。使用亚马逊的高级搜索来寻找 <a href="http://www.amazon.com/gp/search/ref=sr_adv_b/?search-alias=stripbooks&unfiltered=1&field-keywords=&field-author=&field-title=teach+yourself+hours&field-isbn=&field-publisher=&node=&field-p_n_condition-type=&field-feature_browse-bin=&field-subject=&field-language=&field-dateop=After&field-datemod=&field-dateyear=2000&sort=relevanceexprank&Adv-Srch-Books-Submit.x=16&Adv-Srch-Books-Submit.y=5" target=_blank>2000 年后出版的标题含有「小时」、「学会」等字样</a>
 的书籍，你能找到 512 本这样的书。这其中最火的十本里有九本都与编程有关，剩下一本是关于记账的。把「小时」换成「天」，或者把「学会」换成「掌握」来重新搜索，也能得到类似的结果。</p>
-<p>由此可以得出一个结论，要么大家都非常匆忙地学习编程，要么编程本身比其他技能要容易掌握得多。Felleisen 等人在他们所著的<a href="https://web.archive.org/web/20090307132819/http://www.ccs.neu.edu/home/matthias/HtDP2e/index.html" target="_blank">《如何设计程序》</a>
-<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>中提到「差劲的编程是容易的，就算是木头脑袋的白痴也能在 21 天内学会它」，表达了对这一趋势的认同。漫画 The Abstruse<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> Goose 也表达了<a href="http://abstrusegoose.com/249" target="_blank">同感</a>
+<p>由此可以得出一个结论，要么大家都非常匆忙地学习编程，要么编程本身比其他技能要容易掌握得多。Felleisen 等人在他们所著的<a href=https://web.archive.org/web/20090307132819/http://www.ccs.neu.edu/home/matthias/HtDP2e/index.html target=_blank>《如何设计程序》</a>
+<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup>中提到「差劲的编程是容易的，就算是木头脑袋的白痴也能在 21 天内学会它」，表达了对这一趋势的认同。漫画 The Abstruse<sup id=fnref:2><a href=#fn:2 class=footnote-ref role=doc-noteref>2</a></sup> Goose 也表达了<a href=http://abstrusegoose.com/249 target=_blank>同感</a>
 。</p>
-<p>我们分析一下<a href="https://www.amazon.com/dp/0672333317" target="_blank">《24 小时学会 C++》</a>
-<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>这种标题是代表什么意思：</p>
+<p>我们分析一下<a href=https://www.amazon.com/dp/0672333317 target=_blank>《24 小时学会 C++》</a>
+<sup id=fnref:3><a href=#fn:3 class=footnote-ref role=doc-noteref>3</a></sup>这种标题是代表什么意思：</p>
 <ul>
 <li><code>24小时</code>：很遗憾，这点时间不够，见下节</li>
 <li><code>学会</code>：编写数个有意义的程序，并从其中的成败里学到东西；抑或是与一位有经验的程序员共事，了解了熟悉 C++ 的语言环境是一种什么体验。别想了，这些事情不可能在 24 小时内完成。总之，这么短的时间内你学不了什么东西。所以这本书只能涉及到浮于表面的熟练，而非深层次的理解。如 Alexander Pope 所说：「一知半解是件危险事」。</li>
-<li><code>C++</code>：24 小时内你或许可以学到一些 C++ 的语法（前提是你已经会了另一门编程语言），但是你恐怕无法学懂使用这门语言的方法。简而言之，假设你是一名 Basic 程序员，你可以学会用 Basic 的风格写出 C++ 的语法，但是你学不到 C++ 真正擅长（或者不擅长）的地方。那么，这有什么意义呢？<a href="http://www-pu.informatik.uni-tuebingen.de/users/klaeren/epigrams.html" target="_blank">Alan Perlis</a>
+<li><code>C++</code>：24 小时内你或许可以学到一些 C++ 的语法（前提是你已经会了另一门编程语言），但是你恐怕无法学懂使用这门语言的方法。简而言之，假设你是一名 Basic 程序员，你可以学会用 Basic 的风格写出 C++ 的语法，但是你学不到 C++ 真正擅长（或者不擅长）的地方。那么，这有什么意义呢？<a href=http://www-pu.informatik.uni-tuebingen.de/users/klaeren/epigrams.html target=_blank>Alan Perlis</a>
 曾经说过：「不会对你的编程思维产生影响的编程语言不值得学习」。当然，也不排除有这种可能性：为了完成某一项工作，你被迫要学一点点 C++（也许更可能是 JavaScript 或者 Processing）来与现有的工具进行交互。然而这种情况下你就不是在学习编程，而是在学习完成这项工作而已。</li>
 </ul>
-<h2 id="十年学会编程">十年学会编程<a href="#十年学会编程" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
-<p>研究人员们（<a href="https://www.amazon.com/exec/obidos/ASIN/034531509X/" target="_blank">Bloom(1985)</a>
-, <a href="#bh">Bryan &amp; Harter (1899)</a>
-, <a href="https://www.amazon.com/exec/obidos/ASIN/0805803092" target="_blank">Hayes (1989)</a>
-, <a href="#cs">Chase &amp; Simon (1973)</a>
-<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>）已经证实，一个人差不多需要十年的时间才能在一个领域内达到专精的水平，成为行家。这些领域包括但不限于国际象棋、编曲、发电报、绘画、钢琴演奏、游泳、网球、神经心理学研究以及拓扑学。秘诀就是——刻意练习——不仅仅是重复，而是用稍微超出自己现有能力的任务来挑战自己，并在尝试的过程中以及事后分析自己的表现，以及纠正犯过的错，然后再不断重复这个过程。这条路似乎并没有真正的捷径可走：就连在四岁时被认为是音乐神童的莫扎特，也是在十三年之后才谱出世界级的乐谱。换个类型来说，披头士在 1964 年通过一系列热门歌曲以及上了《埃德·沙利文秀》而在荧幕上突然走红，然而他们从 1957 年开始就已经在利物浦和汉堡的小俱乐部里表演了。尽管他们早些时候就已经赢得了大众的喜爱，但是那张让他们首次获得真正意义上的成功的专辑《佩珀军士》也是到了 1967 年才发行。</p>
-<p><a href="https://www.amazon.com/Outliers-Story-Success-Malcolm-Gladwell/dp/0316017922" target="_blank">Malcolm Gladwell</a>
- 将这个观念做了通俗化处理，只是他更聚焦于「一万小时」，而非「十年」。Henri Cartier-Bresson（1908-2004）也有着另一套衡量标准：「你最差的照片是你照的头一万张」（他没意料到有数码相机这个东西，有些人一周就能照一万张）。真正的行家也许需要一辈子：Samuel Johnson（1709-1784）说过「在任何一个部门做到卓越都需要一生的努力，不能付出比一辈子更小的代价来交换卓越」。乔叟（1340-1400）也抱怨过：「人生太短，学路太长」。希波克拉底（约公元前 400 年）的一句名言「艺长，寿短」，出自「艺术长，寿命短，机会稍纵即逝，试验充满诡谲，事事皆难断」。当然，最终答案肯定不是一个确切的数字：假设所有的技能（比如编程、国际象棋、跳棋、演奏），或者所有人都需要完全相同的时间，来（被）掌握，这并不符合常理。如 <a href="http://www.amazon.com/K.-Anders-Ericsson/e/B000APB8AQ/" target="_blank">K. Anders Ericsson</a>
-<sup><a href="#sup3">[译注3]</a>
+<h2 id=十年学会编程>十年学会编程<a href=#十年学会编程 class=anchor aria-hidden=true><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3"/><line x1="8" y1="12" x2="16" y2="12"/></svg></a></h2>
+<p>研究人员们（<a href=https://www.amazon.com/exec/obidos/ASIN/034531509X/ target=_blank>Bloom(1985)</a>
+, <a href=#bh>Bryan & Harter (1899)</a>
+, <a href=https://www.amazon.com/exec/obidos/ASIN/0805803092 target=_blank>Hayes (1989)</a>
+, <a href=#cs>Chase & Simon (1973)</a>
+<sup id=fnref:4><a href=#fn:4 class=footnote-ref role=doc-noteref>4</a></sup>）已经证实，一个人差不多需要十年的时间才能在一个领域内达到专精的水平，成为行家。这些领域包括但不限于国际象棋、编曲、发电报、绘画、钢琴演奏、游泳、网球、神经心理学研究以及拓扑学。秘诀就是——刻意练习——不仅仅是重复，而是用稍微超出自己现有能力的任务来挑战自己，并在尝试的过程中以及事后分析自己的表现，以及纠正犯过的错，然后再不断重复这个过程。这条路似乎并没有真正的捷径可走：就连在四岁时被认为是音乐神童的莫扎特，也是在十三年之后才谱出世界级的乐谱。换个类型来说，披头士在 1964 年通过一系列热门歌曲以及上了《埃德·沙利文秀》而在荧幕上突然走红，然而他们从 1957 年开始就已经在利物浦和汉堡的小俱乐部里表演了。尽管他们早些时候就已经赢得了大众的喜爱，但是那张让他们首次获得真正意义上的成功的专辑《佩珀军士》也是到了 1967 年才发行。</p>
+<p><a href=https://www.amazon.com/Outliers-Story-Success-Malcolm-Gladwell/dp/0316017922 target=_blank>Malcolm Gladwell</a>
+将这个观念做了通俗化处理，只是他更聚焦于「一万小时」，而非「十年」。Henri Cartier-Bresson（1908-2004）也有着另一套衡量标准：「你最差的照片是你照的头一万张」（他没意料到有数码相机这个东西，有些人一周就能照一万张）。真正的行家也许需要一辈子：Samuel Johnson（1709-1784）说过「在任何一个部门做到卓越都需要一生的努力，不能付出比一辈子更小的代价来交换卓越」。乔叟（1340-1400）也抱怨过：「人生太短，学路太长」。希波克拉底（约公元前 400 年）的一句名言「艺长，寿短」，出自「艺术长，寿命短，机会稍纵即逝，试验充满诡谲，事事皆难断」。当然，最终答案肯定不是一个确切的数字：假设所有的技能（比如编程、国际象棋、跳棋、演奏），或者所有人都需要完全相同的时间，来（被）掌握，这并不符合常理。如 <a href=http://www.amazon.com/K.-Anders-Ericsson/e/B000APB8AQ/ target=_blank>K. Anders Ericsson</a>
+<sup><a href=#sup3>[译注3]</a>
 </sup>教授所说：「在绝大多数领域，就算是最具有天赋的人也需要花费巨量的时间才能达到最高的水准。一万小时这个数只是给人一个概念，它代表的是，就算与生俱来就已经最具有天赋的那个人也需要年复一年日复一日地每周练习十到二十个小时，才能达到顶级的高度。」</p>
-<h2 id="所以你想成为一名程序员">所以，你想成为一名程序员<a href="#所以你想成为一名程序员" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<h2 id=所以你想成为一名程序员>所以，你想成为一名程序员<a href=#所以你想成为一名程序员 class=anchor aria-hidden=true><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3"/><line x1="8" y1="12" x2="16" y2="12"/></svg></a></h2>
 <p>想要在编程领域获得成功，这是我给出的秘诀：</p>
 <ul>
 <li>培养编程的<code>兴趣</code>并乐在其中，确保它能足够有趣以至于能让你奉献十年/一万小时的光阴。</li>
-<li><code>动手</code>。最好的学习方法是<a href="http://www.engines4ed.org/hyperbook/nodes/NODE-120-pg.html" target="_blank">学以致用(Learning by Doing)</a>
-。更准切地说，「一个人在某个领域内的顶级水准，并不是随着经验的增长自动得来的。就算是一个经验已经很丰富的人，如果刻意付出努力来提升自己，他/她的水准仍然可以得到提升。」<a href="https://web.archive.org/web/20050224084133/http://www2.umassd.edu/swpi/DesignInCS/expertise.html" target="_blank">（第 366 页）</a>
-<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>，而且「最有效的学习需要一项明确的任务，并需要针对个人情况调整到合适的难度，提供详尽的反馈，以及重复和改错的机会」（第 20-21 页）。这本书<a href="http://www.amazon.com/exec/obidos/ASIN/0521357349" target="_blank">《Cognition in Practice》</a>
+<li><code>动手</code>。最好的学习方法是<a href=http://www.engines4ed.org/hyperbook/nodes/NODE-120-pg.html target=_blank>学以致用(Learning by Doing)</a>
+。更准切地说，「一个人在某个领域内的顶级水准，并不是随着经验的增长自动得来的。就算是一个经验已经很丰富的人，如果刻意付出努力来提升自己，他/她的水准仍然可以得到提升。」<a href=https://web.archive.org/web/20050224084133/http://www2.umassd.edu/swpi/DesignInCS/expertise.html target=_blank>（第 366 页）</a>
+<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup>，而且「最有效的学习需要一项明确的任务，并需要针对个人情况调整到合适的难度，提供详尽的反馈，以及重复和改错的机会」（第 20-21 页）。这本书<a href=http://www.amazon.com/exec/obidos/ASIN/0521357349 target=_blank>《Cognition in Practice》</a>
 也是这个观点的一个有趣的参考。</li>
 <li>与其他程序员<code>交谈</code>，阅读其他程序。这比任何书或者培训课程都重要。</li>
-<li>如果你愿意，用四年的时间去<code>大学</code>进修（或者花更多时间进入研究生院深造）。这将让你接触到那些需要认证的工作，以及加深对该领域了解。但是，如果你不想上学，你同样能够（付出努力）来独自或者通过工作获得类似的经验。不管怎么说，只从书本中学习是不够的。《The New Hacker&rsquo;s Dictionary》的作者 Eric Raymond 曾说过：「如果学习笔刷和颜料不能让人成为杰出的画家，那么计算机科学教育也并不能令人成为杰出的程序员」。我雇过最优秀的程序员中，其中一个人只有高中文凭；他产出过许多<a href="http://www.mozilla.org/" target="_blank">伟大的软件</a>
-，拥有他自己的<a href="http://groups.google.com/groups?q=alt.fan.jwz&amp;meta=site%3Dgroups" target="_blank">新闻小组</a>
-，并且通过股票期权赚到了一笔能买下一家属于他自己的<a href="http://en.wikipedia.org/wiki/DNA_Lounge" target="_blank">夜总会</a>
+<li>如果你愿意，用四年的时间去<code>大学</code>进修（或者花更多时间进入研究生院深造）。这将让你接触到那些需要认证的工作，以及加深对该领域了解。但是，如果你不想上学，你同样能够（付出努力）来独自或者通过工作获得类似的经验。不管怎么说，只从书本中学习是不够的。《The New Hacker&rsquo;s Dictionary》的作者 Eric Raymond 曾说过：「如果学习笔刷和颜料不能让人成为杰出的画家，那么计算机科学教育也并不能令人成为杰出的程序员」。我雇过最优秀的程序员中，其中一个人只有高中文凭；他产出过许多<a href=http://www.mozilla.org/ target=_blank>伟大的软件</a>
+，拥有他自己的<a href="http://groups.google.com/groups?q=alt.fan.jwz&meta=site%3Dgroups" target=_blank>新闻小组</a>
+，并且通过股票期权赚到了一笔能买下一家属于他自己的<a href=http://en.wikipedia.org/wiki/DNA_Lounge target=_blank>夜总会</a>
 的钱。</li>
 <li>与其他程序员一起参与<code>项目</code>；在一些项目里成为拔尖的程序员，并在其他的项目里垫底。当你拔尖时，你能磨练你领导项目的能力，并用你的远见鼓舞人心。当你垫底时，你可以学习大师们的所作所为，也可以了解他们不喜欢干什么（因为他们会强迫你替他们做这些事情）。</li>
 <li>在其他程序员<code>之后</code>参与项目；理解别人所写的程序，看看怎么才能在原程序员不在场时理解并修复它；想想你可以把程序设计成什么样才能让在你之后的其他人维护它时更轻松。</li>
-<li>学习起码半打（六门<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>）<code>编程语言</code>。其中一门强调类的抽象（如 Java 或者 C++），一门强调函数的抽象（如 Lisp 或者 ML 或者 Haskell），一门支持语法抽象（如 Lisp），一门支持声明式制定规范（如 Prolog 或者 C++ 模板），一门强调并行计算（如 Clojure 或者 Go）。</li>
-<li>切记，「计算机科学」的名字中有一个「计算机」。了解你的电脑需要花多久去执行一个指令，从内存中取出一个单词（分为缓存是否命中两种情况），从磁盘读取相邻的单词，以及在磁盘上寻找新的位置。（<a href="#answers">答案在此</a>
+<li>学习起码半打（六门<sup id=fnref:5><a href=#fn:5 class=footnote-ref role=doc-noteref>5</a></sup>）<code>编程语言</code>。其中一门强调类的抽象（如 Java 或者 C++），一门强调函数的抽象（如 Lisp 或者 ML 或者 Haskell），一门支持语法抽象（如 Lisp），一门支持声明式制定规范（如 Prolog 或者 C++ 模板），一门强调并行计算（如 Clojure 或者 Go）。</li>
+<li>切记，「计算机科学」的名字中有一个「计算机」。了解你的电脑需要花多久去执行一个指令，从内存中取出一个单词（分为缓存是否命中两种情况），从磁盘读取相邻的单词，以及在磁盘上寻找新的位置。（<a href=#answers>答案在此</a>
 ）</li>
 <li>参与一门语言的<code>标准化</code>工作。可以是 ANSI C++ 委员会，也可以是你决定自己的本地代码风格是两个还是四个空格锁进。不管用哪种方式，你都能了解到别人喜欢一门语言的什么特质，以及他们喜欢的程度，甚至他们为什么喜欢。</li>
-<li>具备可以尽快<code>脱离</code>语言标准化工作的悟性<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup></li>
+<li>具备可以尽快<code>脱离</code>语言标准化工作的悟性<sup id=fnref:6><a href=#fn:6 class=footnote-ref role=doc-noteref>6</a></sup></li>
 </ul>
 <p>考虑到这一切，是否仅靠学习书本就能走到更远的地方，还是得打一个问号。在我第一个孩子出生之前，我读过所有教人<code>如何做</code>的书籍，却还是觉得自己是一个毫无头绪的新手。三十个月后，我第二个孩子出生了，我有回到书本去寻找慰藉吗？没有，相反，我更依赖于我的个人经验。结果发现，这对我来说要比那些专家们写的上千页的文字更有用，更能令我安心。</p>
-<p>Fred Brooks 在他的文章<a href="https://zh.wikipedia.org/wiki/%E6%B2%A1%E6%9C%89%E9%93%B6%E5%BC%B9" target="_blank">《没有银弹》</a>
+<p>Fred Brooks 在他的文章<a href=https://zh.wikipedia.org/wiki/%E6%B2%A1%E6%9C%89%E9%93%B6%E5%BC%B9 target=_blank>《没有银弹》</a>
 中提出了寻找优秀软件设计者的三个步骤：</p>
 <ol>
 <li>系统性地识别出顶尖的设计者们，愈早愈好</li>
 <li>指派一名职业导师负责有潜力的人才的发展，并一丝不苟地保存好职业档案</li>
 <li>为成长中设计师们提供交流与相互促进的环境</li>
 </ol>
-<p>作为以上计划的前提，部分人应该已经具有了成为好的设计师所必须的品质；而剩下要做的只是把他们哄好。<a href="http://www-pu.informatik.uni-tuebingen.de/users/klaeren/epigrams.html" target="_blank">Alan Perlis</a>
+<p>作为以上计划的前提，部分人应该已经具有了成为好的设计师所必须的品质；而剩下要做的只是把他们哄好。<a href=http://www-pu.informatik.uni-tuebingen.de/users/klaeren/epigrams.html target=_blank>Alan Perlis</a>
 用更简明扼要的方式表达过同样的意思：「每个人都能学会要雕刻什么东西，而米开朗基罗则必须学会不去雕塑什么。优秀的程序员也是如此」。Perlis 的意思是说，伟大的人们拥有超出他们修为的内在品质；然而这些品质却从何而来？是与生俱来的吗，还是通过勤奋而逐渐获得？就像 Auguste Gusteau（《料理鼠王》中虚构的厨师角色）说过：「人人都可以烹饪，但只有无畏之人才能做得出色。」我更愿意把它看作是把自己一生大部分时间奉献给刻意练习这件事本身的意愿，但也许<code>无畏</code>是概括它的一种方式。又或者，如 Gusteau 的批评者 Anton Ego 所说：「不是任何人都能成为优秀的艺术家，但是一位优秀的艺术家可以来自任何地方。」</p>
 <p>那么，就去买那本 Java/Ruby/Javascript/PHP 书吧，或许你会用上他的。只是，不论是 24 小时或者 21 天，这些时间都不足以让你改变你的生活或者提升你作为程序员的整体技能。何不考虑一下在 24 个月内通过努力来稳步提升自己？这样的话，你就已经准备开始扬帆远航了……</p>
 <hr>
-<h2 id="参考资料">参考资料<a href="#参考资料" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
-<p>    Bloom, Benjamin (ed.) <a href="http://www.amazon.com/exec/obidos/ASIN/034531509X" target="_blank"><em>Developing Talent in Young People</em></a>
+<h2 id=参考资料>参考资料<a href=#参考资料 class=anchor aria-hidden=true><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3"/><line x1="8" y1="12" x2="16" y2="12"/></svg></a></h2>
+<p>    Bloom, Benjamin (ed.) <a href=http://www.amazon.com/exec/obidos/ASIN/034531509X target=_blank><em>Developing Talent in Young People</em></a>
 , Ballantine, 1985.</p>
-<p>    Brooks, Fred, <a href="http://citeseer.nj.nec.com/context/7718/0" target="_blank"><em>No Silver Bullets</em></a>
+<p>    Brooks, Fred, <a href=http://citeseer.nj.nec.com/context/7718/0 target=_blank><em>No Silver Bullets</em></a>
 , IEEE Computer, vol. 20, no. 4, 1987, p. 10-19.</p>
-<p>    <a name="bh"></a>Bryan, W.L. &amp; Harter, N. &ldquo;Studies on the telegraphic language: The acquisition of a hierarchy of habits&rdquo;<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup> <em>Psychology Review</em>, 1899, 8, 345-375</p>
-<p>    Hayes, John R., <a href="http://www.amazon.com/exec/obidos/ASIN/0805803092" target="_blank"><em>Complete Problem Solver</em></a>
- Lawrence Erlbaum, 1989.</p>
-<p>    <a name="cs"></a>Chase, William G. &amp; Simon, Herbert A. <a href="http://books.google.com/books?id=dYPSHAAACAAJ&amp;dq=%22perception&#43;in&#43;chess%22&#43;simon&amp;ei=z4PyR5iIAZnmtQPbyLyuDQ" target="_blank">&ldquo;Perception in Chess&rdquo;</a>
- <em>Cognitive Psychology</em>, 1973, 4, 55-81.</p>
-<p>    Lave, Jean, <a href="http://www.amazon.com/exec/obidos/ASIN/0521357349" target="_blank"><em>Cognition in Practice: Mind, Mathematics, and Culture in Everyday Life</em></a>
+<p>    <a name=bh></a>Bryan, W.L. & Harter, N. &ldquo;Studies on the telegraphic language: The acquisition of a hierarchy of habits&rdquo;<sup id=fnref:7><a href=#fn:7 class=footnote-ref role=doc-noteref>7</a></sup> <em>Psychology Review</em>, 1899, 8, 345-375</p>
+<p>    Hayes, John R., <a href=http://www.amazon.com/exec/obidos/ASIN/0805803092 target=_blank><em>Complete Problem Solver</em></a>
+Lawrence Erlbaum, 1989.</p>
+<p>    <a name=cs></a>Chase, William G. & Simon, Herbert A. <a href="http://books.google.com/books?id=dYPSHAAACAAJ&dq=%22perception+in+chess%22+simon&ei=z4PyR5iIAZnmtQPbyLyuDQ" target=_blank>&ldquo;Perception in Chess&rdquo;</a>
+<em>Cognitive Psychology</em>, 1973, 4, 55-81.</p>
+<p>    Lave, Jean, <a href=http://www.amazon.com/exec/obidos/ASIN/0521357349 target=_blank><em>Cognition in Practice: Mind, Mathematics, and Culture in Everyday Life</em></a>
 , Cambridge University Press, 1988.</p>
 <hr>
-<h2 id="answers">Answers<a href="#answers" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<h2 id=answers>Answers<a href=#answers class=anchor aria-hidden=true><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3"/><line x1="8" y1="12" x2="16" y2="12"/></svg></a></h2>
 <p>一台典型的电脑上执行各类操作的大约时间：</p>
 <table>
 <thead>
 <tr>
 <th>执行典型的指令</th>
-<th style="text-align:right">1/1,000,000,000 秒 = 1 纳秒</th>
+<th style=text-align:right>1/1,000,000,000 秒 = 1 纳秒</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>从 L1 缓存中获取</td>
-<td style="text-align:right">0.5 纳秒</td>
+<td style=text-align:right>0.5 纳秒</td>
 </tr>
 <tr>
 <td>分支预判错误</td>
-<td style="text-align:right">5 纳秒</td>
+<td style=text-align:right>5 纳秒</td>
 </tr>
 <tr>
 <td>从 L1 缓存中获取</td>
-<td style="text-align:right">7 纳秒</td>
+<td style=text-align:right>7 纳秒</td>
 </tr>
 <tr>
 <td>互斥锁/解锁</td>
-<td style="text-align:right">25 纳秒</td>
+<td style=text-align:right>25 纳秒</td>
 </tr>
 <tr>
 <td>从主内存中获取</td>
-<td style="text-align:right">100 纳秒</td>
+<td style=text-align:right>100 纳秒</td>
 </tr>
 <tr>
 <td>在 1Gbps 的网路上发送 2KB 数据</td>
-<td style="text-align:right">20,000 纳秒</td>
+<td style=text-align:right>20,000 纳秒</td>
 </tr>
 <tr>
 <td>从内存中连续读取 1MB</td>
-<td style="text-align:right">250,000 纳秒</td>
+<td style=text-align:right>250,000 纳秒</td>
 </tr>
 <tr>
 <td>在磁盘上获取新的位置（查找）</td>
-<td style="text-align:right">8,000,000 纳秒</td>
+<td style=text-align:right>8,000,000 纳秒</td>
 </tr>
 <tr>
 <td>从磁盘中连续读取 1MB</td>
-<td style="text-align:right">20,000,000 纳秒</td>
+<td style=text-align:right>20,000,000 纳秒</td>
 </tr>
 <tr>
 <td>将数据包从美国发至欧洲并返回</td>
-<td style="text-align:right">150 毫秒 = 150,000,000 纳秒</td>
+<td style=text-align:right>150 毫秒 = 150,000,000 纳秒</td>
 </tr>
 </tbody>
 </table>
 <hr>
-<h2 id="附录语言的选择">附录：语言的选择<a href="#附录语言的选择" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<h2 id=附录语言的选择>附录：语言的选择<a href=#附录语言的选择 class=anchor aria-hidden=true><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3"/><line x1="8" y1="12" x2="16" y2="12"/></svg></a></h2>
 <p>一些人对于他们该先学什么编程语言有疑惑；这没有一个唯一的答案，不过可以考虑一下这几点：</p>
 <ul>
 <li><code>问朋友</code>。当你问我：「我应该用哪个操作系统，Windows、Unix 还是 Mac？」我的回答通常是：「你朋友用什么你就用什么。」你从你朋友身上所得到的帮助可以抵消掉任何操作系统以及编程语言之间内在的差异性。同时，不要忘了考虑你未来的那些朋友：当你继续学习，你会成为使用这门语言的程序员们交流社区中的一份子。这门语言的社区是日渐壮大还是已经式微，是否有相关书籍、网站、在线论坛能让你获得帮助，以及你是否喜欢这些论坛里的人。</li>
 <li><code>保持简单</code>。像 C++ 和 Java 这类编程语言是针对专业开发人员所设计的，他们的设计者们都是一些专注于代码的运行时效率，并且经验丰富的程序员。所以，这些语言就顺理成章地囊括了针对这些应用场景所的复杂设计。而你关心的其实是学习编程本身，并非这些复杂设计；你需要的是一门新手也很容易去掌握和记忆的编程语言。</li>
 <li><code>游玩</code>。让你选一种学习钢琴的方法，你会选哪个？一个是正常、有互动——每按下一枚琴键你都能听到一个乐音；另一个是「批量」模式——当你弹完一整篇乐章才能听到声音。很显然，互动的模式让钢琴的学习更简单，学编程也是如此。使用一门有互动模式的语言吧，并坚持下去。</li>
 </ul>
-<p>结合以上几个标准，我推荐你从 <a href="http://python.org/" target="_blank">Python</a>
- 或者 <a href="http://www.schemers.org/" target="_blank">Scheme</a>
- 开始，作为你的第一份编程语言。Javascript 也是另一个选择，但它并没有针对初学者设计得很完美，推荐它是因为网上关于它的教程太多了，比如<a href="https://www.khanacademy.org/computing/cs/programming" target="_blank">可汗学院的教程</a>
-。不过具体情况因人而异，也有其他不错的选择。如果你的年龄还是个位数，或许你会偏向于<a href="http://alice.org/" target="_blank">Alice</a>
-、<a href="http://www.squeak.org/" target="_blank">Squeak</a>
-、<a href="https://blockly-demo.appspot.com/static/apps/index.html" target="_blank">Blockly</a>
+<p>结合以上几个标准，我推荐你从 <a href=http://python.org/ target=_blank>Python</a>
+或者 <a href=http://www.schemers.org/ target=_blank>Scheme</a>
+开始，作为你的第一份编程语言。Javascript 也是另一个选择，但它并没有针对初学者设计得很完美，推荐它是因为网上关于它的教程太多了，比如<a href=https://www.khanacademy.org/computing/cs/programming target=_blank>可汗学院的教程</a>
+。不过具体情况因人而异，也有其他不错的选择。如果你的年龄还是个位数，或许你会偏向于<a href=http://alice.org/ target=_blank>Alice</a>
+、<a href=http://www.squeak.org/ target=_blank>Squeak</a>
+、<a href=https://blockly-demo.appspot.com/static/apps/index.html target=_blank>Blockly</a>
 （即使年纪稍大的学习者也同样可以乐在其中），重要的是选择然后开始行动。</p>
 <hr>
-<h2 id="附录书籍和其他资源">附录：书籍和其他资源<a href="#附录书籍和其他资源" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<h2 id=附录书籍和其他资源>附录：书籍和其他资源<a href=#附录书籍和其他资源 class=anchor aria-hidden=true><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3"/><line x1="8" y1="12" x2="16" y2="12"/></svg></a></h2>
 <p>一些人对于他们该从那些书或者网页里学习有疑惑；我重复一遍「仅仅靠书本学习是不够的」，不过我可以推荐下面这些：</p>
 <ul>
-<li><code>Scheme</code>：这本 <a href="http://www.amazon.com/gp/product/0262011530" target="_blank">SICP</a>
- 或许是最好的计算机科学导论了，它确实将教授编程作为一种理解计算机科学的方式。你可以网上看到这本书的<a href="http://www.swiss.ai.mit.edu/classes/6.001/abelson-sussman-lectures/" target="_blank">讲座视频</a>
-，以及<a href="http://mitpress.mit.edu/sicp/full-text/book/book.html" target="_blank">在线版的全文</a>
+<li><code>Scheme</code>：这本 <a href=http://www.amazon.com/gp/product/0262011530 target=_blank>SICP</a>
+或许是最好的计算机科学导论了，它确实将教授编程作为一种理解计算机科学的方式。你可以网上看到这本书的<a href=http://www.swiss.ai.mit.edu/classes/6.001/abelson-sussman-lectures/ target=_blank>讲座视频</a>
+，以及<a href=http://mitpress.mit.edu/sicp/full-text/book/book.html target=_blank>在线版的全文</a>
 。这本书具有挑战性，而且会把一些本可以走其他途径获得成功的人挡在门外。</li>
-<li><code>Scheme</code>：关于如果优雅且实用地设计程序，<a href="http://www.amazon.com/gp/product/0262062186" target="_blank">How to Design Programs (Felleisen <em>et al.</em>)</a>
+<li><code>Scheme</code>：关于如果优雅且实用地设计程序，<a href=http://www.amazon.com/gp/product/0262062186 target=_blank>How to Design Programs (Felleisen <em>et al.</em>)</a>
 是其中最好的几本书之一。</li>
-<li><code>Python</code>：<a href="http://www.amazon.com/gp/product/1887902996" target="_blank">Python Programming: An Intro to CS (Zelle)</a>
- 是一本使用 Python 的入门书，不错。</li>
-<li><code>Python</code>：在 <a href="http://python.org/" target="_blank">Python.org</a>
- 上可以找到一些网上的<a href="http://wiki.python.org/moin/BeginnersGuide" target="_blank">教程</a>
+<li><code>Python</code>：<a href=http://www.amazon.com/gp/product/1887902996 target=_blank>Python Programming: An Intro to CS (Zelle)</a>
+是一本使用 Python 的入门书，不错。</li>
+<li><code>Python</code>：在 <a href=http://python.org/ target=_blank>Python.org</a>
+上可以找到一些网上的<a href=http://wiki.python.org/moin/BeginnersGuide target=_blank>教程</a>
 </li>
-<li><code>Oz</code>：<a href="http://www.amazon.com/gp/product/0262220695" target="_blank">Concepts, Techniques, and Models of Computer Programming (Van Roy &amp; Haridi)</a>
-被认为是 SICP<sup id="fnref:8"><a href="#fn:8" class="footnote-ref" role="doc-noteref">8</a></sup> 的现代继承者。它讲了一些编程的大道理，涵盖了比 SICP 更广的范围，同时还更易读。它使用的 Oz 这门编程语言，少为人知，不过却可以作为学习其他编程语言的基础。</li>
+<li><code>Oz</code>：<a href=http://www.amazon.com/gp/product/0262220695 target=_blank>Concepts, Techniques, and Models of Computer Programming (Van Roy & Haridi)</a>
+被认为是 SICP<sup id=fnref:8><a href=#fn:8 class=footnote-ref role=doc-noteref>8</a></sup> 的现代继承者。它讲了一些编程的大道理，涵盖了比 SICP 更广的范围，同时还更易读。它使用的 Oz 这门编程语言，少为人知，不过却可以作为学习其他编程语言的基础。</li>
 </ul>
 <hr>
-<h2 id="注释">注释<a href="#注释" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
-<p>T. Capey 指出<a href="http://www.amazon.com/exec/obidos/ASIN/0805803092" target="_blank">Complete Problem Solver</a>
+<h2 id=注释>注释<a href=#注释 class=anchor aria-hidden=true><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3"/><line x1="8" y1="12" x2="16" y2="12"/></svg></a></h2>
+<p>T. Capey 指出<a href=http://www.amazon.com/exec/obidos/ASIN/0805803092 target=_blank>Complete Problem Solver</a>
 的亚马逊页面上的「购买此商品的顾客也同时购买」这一栏里出现了《21 天学会孟加拉语》和《学会语法与风格》，我猜大多数人查看了那本书的人都是来自这个页面。感谢 Ross Cohen 提供的关于希波克拉底的帮助。</p>
-<section class="footnotes" role="doc-endnotes">
+<section class=footnotes role=doc-endnotes>
 <hr>
 <ol>
-<li id="fn:1" role="doc-endnote">
-<p>原文部分链接已失效，已替换为 <a href="https://archive.org/" target="_blank">https://archive.org/</a>
- 的版本&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<li id=fn:1 role=doc-endnote>
+<p>原文部分链接已失效，已替换为 <a href=https://archive.org/ target=_blank>https://archive.org/</a>
+的版本&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
 </li>
-<li id="fn:2" role="doc-endnote">
-<p>原文将<code>The Abstruse Goose</code>错拼成了<code>The Abtruse Goose</code>，已做更正&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<li id=fn:2 role=doc-endnote>
+<p>原文将<code>The Abstruse Goose</code>错拼成了<code>The Abtruse Goose</code>，已做更正&#160;<a href=#fnref:2 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
 </li>
-<li id="fn:3" role="doc-endnote">
-<p>原文部分链接带有商家推广链接，已移除&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<li id=fn:3 role=doc-endnote>
+<p>原文部分链接带有商家推广链接，已移除&#160;<a href=#fnref:3 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
 </li>
-<li id="fn:4" role="doc-endnote">
-<p>原文将 <code>Chase &amp; Simon</code> 的顺序反转并拼错，导致原页面内的 named anchor 失效，本篇中修复&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<li id=fn:4 role=doc-endnote>
+<p>原文将 <code>Chase & Simon</code> 的顺序反转并拼错，导致原页面内的 named anchor 失效，本篇中修复&#160;<a href=#fnref:4 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
 </li>
-<li id="fn:5" role="doc-endnote">
-<p>原文的当前版本只列了五类编程语言，但<a href="https://web.archive.org/web/20120614065105/http://www.norvig.com/21-days.html" target="_blank">某些旧版本</a>
-中确实列举了六类&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<li id=fn:5 role=doc-endnote>
+<p>原文的当前版本只列了五类编程语言，但<a href=https://web.archive.org/web/20120614065105/http://www.norvig.com/21-days.html target=_blank>某些旧版本</a>
+中确实列举了六类&#160;<a href=#fnref:5 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
 </li>
-<li id="fn:6" role="doc-endnote">
-<p>此处似乎也可译为意思几乎相反的「请根据自己的判断尽快启动语言标准化计划。」指「不要等到项目不得不标准化时才去制定标准」。感谢 V2EX 网友 @Aoang 的指正&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<li id=fn:6 role=doc-endnote>
+<p>此处似乎也可译为意思几乎相反的「请根据自己的判断尽快启动语言标准化计划。」指「不要等到项目不得不标准化时才去制定标准」。感谢 V2EX 网友 @Aoang 的指正&#160;<a href=#fnref:6 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
 </li>
-<li id="fn:7" role="doc-endnote">
-<p>原文为句号，无反引号&#160;<a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<li id=fn:7 role=doc-endnote>
+<p>原文为句号，无反引号&#160;<a href=#fnref:7 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
 </li>
-<li id="fn:8" role="doc-endnote">
-<p>原文用作者名代指书籍，因中文无此使用习惯，此处直接用书名代替&#160;<a href="#fnref:8" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<li id=fn:8 role=doc-endnote>
+<p>原文用作者名代指书籍，因中文无此使用习惯，此处直接用书名代替&#160;<a href=#fnref:8 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
 </li>
 </ol>
 </section>
-
-			</div>
-			<hr class="post-end">
-			<footer class="post-info">
-				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-feather"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path><line x1="16" y1="8" x2="2" y2="22"></line><line x1="17.5" y1="15" x2="9" y2="15"></line></svg>Peter Norvig, 吴桐（译）</p>
-				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>5443 Words</p>
-				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2020-05-16 18:38 -0700</p>
-			</footer>
-		</article>
-		<div class="post-nav thin">
-			<a class="prev-post" href="https://dccxi.com/posts/summary-replicated-data-consistency/">
-				<span class="post-nav-label">Older&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span><br><span>Summary: Replicated Data Consistency Explained Through Baseball</span>
-			</a>
-		</div>
-		<div id="comments" class="thin">
 </div>
-	</main>
-
-	<footer id="site-footer" class="section-inner thin animated fadeIn faster">
-		<p>&copy; 2022 <a href="https://dccxi.com">Tong Wu</a> &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></p>
-		<p>
-			Made with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &#183; Theme <a href="https://github.com/Track3/hermit" target="_blank" rel="noopener">Hermit</a> &#183; <a href="https://dccxi.com/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
-		</p>
-	</footer>
-
-
-
-	<script src="https://dccxi.com/js/bundle.min.7d8545daa55d62427355498dd8da13f98ff79a7938ce7d2a5e2ae1ec0de3beb8.js" integrity="sha256-fYVF2qVdYkJzVUmN2NoT+Y/3mnk4zn0qXirh7A3jvrg=" crossorigin="anonymous"></script>
-	
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-103634952-2', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
-
+<hr class=post-end>
+<footer class=post-info>
+<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-feather"><path d="M20.24 12.24a6 6 0 00-8.49-8.49L5 10.5V19h8.5z"/><line x1="16" y1="8" x2="2" y2="22"/><line x1="17.5" y1="15" x2="9" y2="15"/></svg>Peter Norvig, 吴桐（译）</p>
+<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6A2 2 0 004 4v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>5443 Words</p>
+<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>2020-05-16 18:38 -0700</p>
+</footer>
+</article>
+<div class="post-nav thin">
+<a class=prev-post href=https://dccxi.com/posts/summary-replicated-data-consistency/>
+<span class=post-nav-label>Older&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span><br><span>Summary: Replicated Data Consistency Explained Through Baseball</span>
+</a>
+</div>
+<div id=comments class=thin>
+</div>
+</main>
+<footer id=site-footer class="section-inner thin animated fadeIn faster">
+<p>&copy; 2022 <a href=https://dccxi.com>Tong Wu</a> &#183; <a href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank rel=noopener>CC BY-NC 4.0</a></p>
+<p>
+Made with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> &#183; Theme <a href=https://github.com/Track3/hermit target=_blank rel=noopener>Hermit</a> &#183; <a href=https://dccxi.com/posts/index.xml target=_blank title=rss><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 019 9"/><path d="M4 4a16 16 0 0116 16"/><circle cx="5" cy="19" r="1"/></svg></a>
+</p>
+</footer>
+<script src=https://dccxi.com/js/bundle.min.7d8545daa55d62427355498dd8da13f98ff79a7938ce7d2a5e2ae1ec0de3beb8.js integrity="sha256-fYVF2qVdYkJzVUmN2NoT+Y/3mnk4zn0qXirh7A3jvrg=" crossorigin=anonymous></script>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-103634952-2','auto'),ga('send','pageview'))</script>
+<script async src=https://www.google-analytics.com/analytics.js></script>
 </body>
-
 </html>
