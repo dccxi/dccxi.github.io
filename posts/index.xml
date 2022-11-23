@@ -337,16 +337,19 @@ Action Keybinding (may be custom) Alternative Keys (same or similar) Move to end
 .</p>
 <p>Before we start, I strongly suggest you to map the <code>caps lock</code> key to some other key you would actually use, like <code>control</code>. It&rsquo;s way more productive to keep a frequently used function key instead of a key that no one ever used under your pinky finger.</p>
 <h2 id="macos">macOS</h2>
-<p>Custom keybindings could be easily achieved by tools like <em>HammerSpoon</em>.</p>
+<p>Custom keybindings could be easily achieved by tools like <a href="https://www.hammerspoon.org/" target="_blank">HammerSpoon</a>
+.</p>
 <p>I used my pinky finger a lot. In addition to the shortcuts mentioned above, I also mapped <code>escape</code> to <code>control</code> when it&rsquo;s pressed for less than 0.15 seconds using a Spoon called <a href="https://github.com/jasonrudolph/ControlEscape.spoon" target="_blank">ControlEscape</a>
 .</p>
 <p>It&rsquo;s actually very practical to map any <code>modifier keys</code> with an additional feature to a short press (or tap). Thus, I modified the Spoon mentioned above a little bit to <a href="https://github.com/dccxi/ShiftParentheses.spoon" target="_blank">ShiftParentheses</a>
 . It made my <code>shift</code> more useful as well.</p>
-<p>BTT is also a convenient tool for me to move or resize window by only moving your mouse while a certain combination of keys was pressed. It&rsquo;s also used to accelerate my track pad speed. I keep a Magic TrackPad under my space bar, so that I can use my thumb to move the cursor in a long distance without move my hands away from my keyboard.</p>
+<p><a href="https://folivora.ai/" target="_blank">BTT</a>
+ is also a convenient tool for me to move or resize window by only moving your mouse while a certain combination of keys was pressed. It&rsquo;s also used to accelerate my track pad speed. I keep a Magic TrackPad under my space bar, so that I can use my thumb to move the cursor in a long distance without move my hands away from my keyboard.</p>
 <h2 id="windows">Windows</h2>
-<p>AutoHotKey is the way to go on Windows. There are also similar scripts that you can use to achieve functions like ControlEscape mentioned above. Thus, I can use almost the same keybindings on both Mac and Windows.</p>
+<p><a href="https://www.autohotkey.com/" target="_blank">AutoHotKey</a>
+ is the way to go on Windows. There are also similar scripts that you can use to achieve functions like ControlEscape mentioned above. Thus, I can use almost the same keybindings on both Mac and Windows.</p>
 <p>Modifiers on Windows have similar one-to-one relationship with macOS modifier but not exactly. Same function involving <code>cmd</code> on macOS can relate to <code>ctrl</code> but some might goes to <code>alt</code> key. For example, on Mac, you hold <code>cmd</code> when click on a link to open it in a new tab, while on Windows, you need to hold <code>alt</code> instead. However, many other keys relies on <code>ctrl</code>.</p>
-<p>In order to reduce the impact on Windows&rsquo;s original keybindings, I mapped the left <code>alt</code>, which has the same location as <code>cmd</code> on Mac, to a hype key (could be a combination of <code>ctrl</code> + <code>alt</code> + <code>shift</code> or any modifiers you like), where native keybindings could be mapped.</p>
+<p>In order to reduce the impact on Windows&rsquo;s original keybindings, I mapped the left <code>alt</code>, which has the same location as <code>cmd</code> on Mac, to a hyper key (could be a combination of <code>ctrl</code> + <code>alt</code> + <code>shift</code> or any modifiers you like), where native keybindings could be mapped to.</p>
 <p>My <code>caps lock</code> was mapped in the same manner. In addition, it was also programmed to have similar behavior as the <code>ControlEscape</code> script on Mac mentioned above.</p>
 <h2 id="chrome-os">Chrome OS</h2>
 <p><code>caps lock</code> doesn&rsquo;t exist on ChromeBooks, but it has a <code>search</code> key. Google does provide options to swap <code>modifier keys</code> as well the <code>search</code> key with each other. Since <code>alt</code> is not widely used here, I swapped it with <code>ctrl</code>. It allows me to create new tab, restore closed pages, locate to address bar, and close the tab using exactly the same keybindings as on other platforms.</p>
@@ -356,5 +359,5 @@ Action Keybinding (may be custom) Alternative Keys (same or similar) Move to end
 <p>ChromeBook is an awesome invention. It is light-weight, light-weight, and light-weight. You can easily get a used ChromeBook Plus from Samsung which has amazing screen and unbelievable battery life for just $200. I use it when I can finish all my work on Google Chrome. There are so many awesome online IDEAs like <a href="http://repl.it" target="_blank">repl.it</a>
 , which made ChromeBooks productive as well (at least more than iPad Pro). Very interesting and inspiring device.</p>
 <h2 id="ios">iOS</h2>
-<p>You can get it that I&rsquo;m joking, right?</p>
+<p>Did you get the joke?</p>
 ]]></content></item></channel></rss>
